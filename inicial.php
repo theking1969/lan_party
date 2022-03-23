@@ -5,7 +5,7 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 
-// Create connection
+// Create connectgi
 $conn = new mysqli($servername, $username, $password);
 
 // Check connection
@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
+//ALOOOOOOOOOOOOOOOOOG
 ?>
     <!DOCTYPE html>
     <html lang="en">
