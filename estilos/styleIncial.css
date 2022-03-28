@@ -12,7 +12,8 @@ html {
 }
 body {
     font-size: 100%;
-    background: linear-gradient(315deg, #000000 0%, #4B0082 74%);
+    background: rgb(32,22,83);
+    background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -58,13 +59,13 @@ main{
 
     display: flex;
     flex-direction: column;
-    gap: 32px;    
-    justify-content: space-around;
-    
+    gap: 32px;
+    justify-content: center;
 }
 .conteudo-principal-escrito-titulo{
     font-family: 'Righteous', cursive;
-} 
+    color: white;
+}
 .conteudo-principal-escrito-subtitulo{
     font-family: 'Cabin', sans-serif;
     font-size: 50px;
@@ -112,6 +113,22 @@ footer{
     align-items: center;
     justify-content: space-around;
 }
+.butao{
+
+    background-color: rgba(78, 213, 207, 0.81);
+   margin-left: 5rem;
+    width: 320px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cabin', sans-serif;
+    border-radius: 31px;
+    font-size: 19px;
+    color: #ffffff;
+}
+.butao:hover{
+    background: #0370ff;
+}
 @media only screen and (max-width: 1200px) {
     .conteudo-principal-escrito-titulo{
         margin-left: 10px;  
@@ -136,6 +153,7 @@ footer{
     .conteudo-principal-escrito-titulo{
         display: flex;
         justify-content: center;
+
     } 
     .conteudo-principal-escrito{        
         display: flex;
@@ -145,6 +163,7 @@ footer{
         max-width: 300px;
         margin-top:6%;
         text-align: center;
+
     }
 
     #img{

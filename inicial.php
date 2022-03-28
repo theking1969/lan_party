@@ -31,28 +31,23 @@ session_start();
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Bem-vindo</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, harum laudantium commodi magni doloremque, eveniet obcaecati nemo ab voluptatem, nisi animi amet autem deserunt ratione perspiciatis. Consequatur accusantium praesentium reprehenderit.</h2>            
+                <h2 class="conteudo-principal-escrito-subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, harum laudantium commodi magni doloremque, eveniet obcaecati nemo ab voluptatem, nisi animi amet autem deserunt ratione perspiciatis. Consequatur accusantium praesentium reprehenderit.</h2>
+                <button name="butao" class="butao" value="inscrever" >Quero me inscrever</button>
             </div>
+
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;width:642px;height:448px;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="images/undraw_directions_x53j (2).svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
+                    <img src="images/foto.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
                     </div>
                     <div class="carousel-item">
-                    <img src="images/undraw_directions_x53j (2).svg" class="d-block w-100" alt="..." style="width:642px;height:448px;">
+                    <img src="images/foto.svg" class="d-block w-100" alt="..." style="width:642px;height:448px;">
                     </div>
-                
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
             </div>
-            
+
         </section> 
     </main>
         <footer>         
