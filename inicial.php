@@ -1,20 +1,7 @@
 <?php
 session_start();
-
-$servername = "localhost";
-$username = "username";
-$password = "password";
-
-// Create connectgi
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-
 //ALOOOOOOOOOOOOOOOOOG
+//fafa
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -34,7 +21,7 @@ echo "Connected successfully";
             <nav class="cabecalho-menu" >
                 <a href="" class="cabecalho-menu-item">Início</a>
                 <a href="listaExercicios.php" class="cabecalho-menu-item">Sobre o projeto</a>
-                <a href="listaExercicios.php" class="cabecalho-menu-item">õesIncriç</a>
+                <a href="listaExercicios.php" class="cabecalho-menu-item">Inscrições</a>
 
                 <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
             

@@ -12,7 +12,7 @@ html {
 }
 body {
     font-size: 100%;
-    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    background: linear-gradient(315deg, #000000 0%, #4B0082 74%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
