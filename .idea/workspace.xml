@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="" />
+    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicial.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listaExercicios.php" beforeDir="false" afterPath="$PROJECT_DIR$/listaExercicios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados.php" beforeDir="false" afterPath="$PROJECT_DIR$/resultados.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="26hk4uQwiL7aKRAeqfmhliYoZtg" />
   <component name="ProjectViewState">
@@ -41,10 +50,28 @@
       <updated>1647883017179</updated>
       <workItem from="1647883018448" duration="1325000" />
       <workItem from="1647946129343" duration="303000" />
+      <workItem from="1648481462480" duration="762000" />
+      <workItem from="1648567779734" duration="6000" />
+      <workItem from="1648640881158" duration="33000" />
+      <workItem from="1648644054742" duration="1502000" />
+      <workItem from="1648645584988" duration="958000" />
+      <workItem from="1648646600328" duration="4131000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

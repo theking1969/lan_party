@@ -17,8 +17,8 @@ if (isset( $_POST ['submit3'])) {
     <link rel="stylesheet" href="estilos/styleExercicios.css">
     <link rel="icon" href="images/Closed_Book_Icon.svg.png">
     <title>Exercícios</title>
-    
 </head>
+
 <body>
     <header class="cabecalho">
         <img  id="img"src="images/Closed_Book_Icon.svg.png"  alt="" width="3%" height="8%">
@@ -31,27 +31,16 @@ if (isset( $_POST ['submit3'])) {
     </header>
     <section id="sec-titulo"">
         <div class="break"></div>
-        <h1 id="titulo">Escolha um dos nossos exercícios</h1>
+        <h1 id="titulo">Inscreva-se!</h1>
     </section>
     <main>
         <div class="break"></div>
         <section class="sec-exercicios">
-            <form id="exercicio1"action="exercicio1.php" method="post">            
-                     <h2 class="exercicio-titulo">Exercício 1</h2>                     
-                        <h3 id="Exercicio1-subtitulo" class="conteudo-principal-escrito-subtitulo">Receber 10 números separados por vírgula em um único campo de um formulário e ibir o maior e o menor deles.</h3>                                                  
-                    <button class="butao"type="submit" name="submit1" id="submit1">Vamos ver!</button> 
-            </form>
-            <form id="exercicio2"action="listaExercicios.php" method="post">
-                <h2 class="exercicio-titulo">Exercício 2</h2>                   
-                        <h3 class="conteudo-principal-escrito-subtitulo">Escrever uma senha aleatória de 8 dígitos podendo conter letras, números e 
-                            símbolos.</h3>      
-                            <button class="butao"type="submit" name="submit2" id="submit2">Vamos ver!</button>                         
-              </form>
-            <form id="exercicio3"action="listaExercicios.php" method="post">
-                <h2 class="exercicio-titulo">Exercício 3</h2>               
+            <form id="exercicio3" action="listaExercicios.php" method="post">
+                <h2 class="exercicio-titulo">Inscrever</h2>
                    <h3 class="conteudo-principal-escrito-subtitulo">Recebe 2 números num formulário e mostra 20 números aleatórios entre os 2 
                     números dados.</h3> 
-                    <button class="butao"type="submit" name="submit3" id="submit3">Vamos ver!</button>                        
+                    <input type="submit" class="butao" name="inscrever" id="submit3" value="Inscrever"></input>
             </form>
         </section>
     </main>
@@ -69,3 +58,14 @@ if (isset( $_POST ['submit3'])) {
         </footer>
 </body>
 </html>
+
+<?php
+function inscrever(){
+    header("Location: exercicio3.php");
+}
+
+
+if(isset($_POST['butao'])) {
+    inscrever();
+}
+?>

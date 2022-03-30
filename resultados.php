@@ -1,12 +1,15 @@
 <?php
 session_start();
 
-
-
+$dbHost= 'Localhost';
+$dbUsername= 'root';
+$Password= '';
+$dbName= 'bdlan_party';
+$conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,29 +35,47 @@ session_start();
 <main>
     <section class="conteudo-principal">
         <div class="conteudo-principal-escrito">
-            <h1 class="conteudo-principal-escrito-titulo">Bem-vindo</h1>
-            <h2 class="conteudo-principal-escrito-subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, harum laudantium commodi magni doloremque, eveniet obcaecati nemo ab voluptatem, nisi animi amet autem deserunt ratione perspiciatis. Consequatur accusantium praesentium reprehenderit.</h2>
-        </div>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;width:642px;height:448px;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/undraw_directions_x53j (2).svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/undraw_directions_x53j (2).svg" class="d-block w-100" alt="..." style="width:642px;height:448px;">
-                </div>
+            <form method="post" action="resultados.php">
+            <label>Equipa 1</label>
+            <select>
+                <?php
+                $sql = "SELECT Nome_Equipa FROM equipas";
+                $result = $conn->query($sql);
 
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        $equipas = array($row["Nome_Equipa"]);
+                        foreach ($equipas as $equipa) {
+                            echo '<option>' . $equipa . '</option>';
+                        }
+                    }
+                }
+                ?>
+            </select>
 
+            <label>Equipa 2</label>
+            <select>
+                <?php
+                $sql = "SELECT Nome_Equipa FROM equipas";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        $equipas = array($row["Nome_Equipa"]);
+                        foreach ($equipas as $equipa) {
+                            echo '<option>' . $equipa . '</option>';
+                        }
+                    }
+                }
+                ?>
+            </select>
+
+            <label>Resultado</label>
+            <input type="text" name="resultado">
+
+            </form>
     </section>
 </main>
 <footer>
@@ -70,3 +91,4 @@ session_start();
 </footer>
 </body>
 </html>
+
