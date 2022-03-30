@@ -14,14 +14,7 @@ body {
     font-size: 100%;
     background: rgb(32,22,83);
     background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
     min-height: 100%;
 }
 h1{
@@ -118,10 +111,6 @@ footer{
     justify-content: space-around;
 }
 .butao{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     background-color: rgba(78, 213, 207, 0.81);
     width: 320px;
     height: 60px;
@@ -131,6 +120,11 @@ footer{
     border-radius: 31px;
     font-size: 19px;
     color: #ffffff;
+}
+.conteudo-principal-escrito-butao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .butao:hover{
     background: #0370ff;

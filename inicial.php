@@ -7,7 +7,7 @@ session_start();
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exercicios Online</title>
+        <title>Esco-Lan  party</title>
         <link rel="stylesheet" href="estilos/styleIncial.css">
         <link rel="icon" href="images/icon_lan-party.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -31,8 +31,9 @@ session_start();
                 <h1 class="conteudo-principal-escrito-titulo">Bem-vindo jogador</h1>
                 <h2 class="conteudo-principal-escrito-subtitulo">A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reuinir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
                 <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás há espera do que ?<br/><br/>Inscrevete!</h2>
-
-                <button name="butao" class="butao" value="inscrever">Quero me inscrever!</button>
+                <div class="conteudo-principal-escrito-butao">
+                        <button name="butao" class="butao" value="inscrever">Quero me inscrêver!</button>
+                </div>
             </div>
 
             <div style="margin-top: 2%;width:642px;height:448px;">
