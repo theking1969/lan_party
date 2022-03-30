@@ -36,8 +36,8 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
     <section class="conteudo-principal">
         <div class="conteudo-principal-escrito">
             <form method="post" action="resultados.php">
-            <label>Equipa 1</label>
-            <select>
+            <label>Equipa Vencedora: </label>
+            <select name="equipavence">
                 <?php
                 $sql = "SELECT Nome_Equipa FROM equipas";
                 $result = $conn->query($sql);
@@ -53,28 +53,11 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
                 }
                 ?>
             </select>
-
-            <label>Equipa 2</label>
-            <select>
-                <?php
-                $sql = "SELECT Nome_Equipa FROM equipas";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while ($row = $result->fetch_assoc()) {
-                        $equipas = array($row["Nome_Equipa"]);
-                        foreach ($equipas as $equipa) {
-                            echo '<option>' . $equipa . '</option>';
-                        }
-                    }
-                }
-                ?>
-            </select>
-
-            <label>Resultado</label>
+            <br>
+            <label>Resultado: </label>
             <input type="text" name="resultado">
-
+                <br>
+             <input type="submit" name="inserir" value="Inserir Resultado">
             </form>
     </section>
 </main>
@@ -92,3 +75,28 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 </body>
 </html>
 
+<?php
+function Inserir(){
+    $dbHost= 'Localhost';
+    $dbUsername= 'root';
+    $Password= '';
+    $dbName= 'bdlan_party';
+    $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
+
+    $sql = 'INSERT INTO resultados (Resultado, ID_equipa_vencedora) VALUES (' . $_POST['equipavence'] . ')';
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+}
+
+
+if(isset($_POST['inserir']))
+{
+
+}
+?>
