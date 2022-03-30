@@ -17,7 +17,7 @@ session_start();
     </head>
     <body>
         <header class="cabecalho">
-            <img id="img" src="images/Closed_Book_Icon.svg.png"  alt="" width="3%" height="8%">
+            <img id="img" src="images/icon_lan-party.png"  alt="" width="3%" height="8%">
             <nav class="cabecalho-menu" >
                 <a href="" class="cabecalho-menu-item">Início</a>
                 <a href="listaExercicios.php" class="cabecalho-menu-item">Sobre o projeto</a>
@@ -30,9 +30,11 @@ session_start();
     <main>
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <h1 class="conteudo-principal-escrito-titulo">Bem-vindo</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, harum laudantium commodi magni doloremque, eveniet obcaecati nemo ab voluptatem, nisi animi amet autem deserunt ratione perspiciatis. Consequatur accusantium praesentium reprehenderit.</h2>
-                <button name="butao" class="butao" value="inscrever" >Quero me inscrever</button>
+                <h1 class="conteudo-principal-escrito-titulo">Bem-vindo jogador</h1>
+                <h2 class="conteudo-principal-escrito-subtitulo">A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reuinir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
+                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás há espera do que ?<br/><br/>Inscrevete!</h2>
+
+                <button name="butao" class="butao" value="inscrever">Quero me inscrever!</button>
             </div>
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;width:642px;height:448px;">
