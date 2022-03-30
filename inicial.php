@@ -35,15 +35,11 @@ session_start();
                 <button name="butao" class="butao" value="inscrever" >Quero me inscrever</button>
             </div>
 
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;width:642px;height:448px;">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
+            <div style="margin-top: 2%;width:642px;height:448px;">
+                <div >
+                    <div >
                     <img src="images/foto.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
                     </div>
-                    <div class="carousel-item">
-                    <img src="images/foto.svg" class="d-block w-100" alt="..." style="width:642px;height:448px;">
-                    </div>
-
                 </div>
 
             </div>
