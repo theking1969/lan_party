@@ -97,6 +97,6 @@ function Inserir(){
 
 if(isset($_POST['inserir']))
 {
-
+inserir();
 }
 ?>

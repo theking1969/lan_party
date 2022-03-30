@@ -31,6 +31,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -49,7 +50,7 @@
       <workItem from="1648640881158" duration="33000" />
       <workItem from="1648644054742" duration="1502000" />
       <workItem from="1648645584988" duration="958000" />
-      <workItem from="1648646600328" duration="6578000" />
+      <workItem from="1648646600328" duration="6896000" />
     </task>
     <task id="LOCAL-00001" summary="miguel">
       <created>1648650969448</created>
@@ -72,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648652936843</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="miguel">
+      <created>1648653341351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648653341351</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
