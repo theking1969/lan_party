@@ -1,7 +1,5 @@
 <?php
 session_start();
-//ALOOOOOOOOOOOOOOOOOG
-//fafa
 ?>
     <!DOCTYPE html>
     <html lang="en">
