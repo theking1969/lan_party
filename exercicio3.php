@@ -4,6 +4,7 @@ if(!isset($_SESSION['login'])){
     header("Location: inicial.php");
 }
 $messageCaixa1='';
+//oi
 $messageCaixa2='';
 $randomString = '';
     function gerarRandom() {
