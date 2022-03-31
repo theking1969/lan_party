@@ -40,7 +40,7 @@ if (isset( $_POST ['submit3'])) {
                 <h2 class="exercicio-titulo">Inscrever</h2>
                    <h3 class="conteudo-principal-escrito-subtitulo">Recebe 2 números num formulário e mostra 20 números aleatórios entre os 2 
                     números dados.</h3> 
-                    <input type="submit" class="butao" name="inscrever" id="submit3" value="Inscrever"></input>
+                    <input type="submit" class="butao" name="inscrever" id="submit3" value="Inscrever">
             </form>
         </section>
     </main>
