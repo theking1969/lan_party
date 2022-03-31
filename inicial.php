@@ -1,7 +1,7 @@
 <?php
 session_start();
 //ALOOOOOOOOOOOOOOOOOG
-//fafafafaffa
+//fafa
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -31,26 +31,17 @@ session_start();
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Bem-vindo jogador</h1>
-<<<<<<< HEAD
                 <h2 class="conteudo-principal-escrito-subtitulo">A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reunir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
                 <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás à espera do que ?<br/><br/>Inscreve-te!</h2>
                 <div class="conteudo-principal-escrito-butao">
                         <button name="butao" class="butao" value="inscrever">Quero me inscrever!</button>
                 </div>
-=======
-                <h2 class="conteudo-principal-escrito-subtitulo">A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reuinir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
-                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás há espera do que ?<br/><br/>Inscrevete!</h2>
-
-                <form method="post" action="inicial.php">
-                <button name="butao" class="butao" value="inscrever">Quero me inscrever!</button>
-                </form>
->>>>>>> 54148ec65d247dc73dacb6eb31318d3e5c322afb
             </div>
 
             <div style="margin-top: 2%;width:642px;height:448px;">
                 <div>
                     <div>
-                    <img src="images/foto.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
+                    <img src="images/Online games addiction-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
                     </div>
 
                 </div>
