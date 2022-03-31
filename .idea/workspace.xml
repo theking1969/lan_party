@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="" />
+    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="miguel" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +12,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="26hk4uQwiL7aKRAeqfmhliYoZtg" />
   <component name="ProjectViewState">
@@ -28,6 +31,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -41,10 +45,61 @@
       <updated>1647883017179</updated>
       <workItem from="1647883018448" duration="1325000" />
       <workItem from="1647946129343" duration="303000" />
+      <workItem from="1648481462480" duration="762000" />
+      <workItem from="1648567779734" duration="6000" />
+      <workItem from="1648640881158" duration="33000" />
+      <workItem from="1648644054742" duration="1502000" />
+      <workItem from="1648645584988" duration="958000" />
+      <workItem from="1648646600328" duration="6896000" />
     </task>
+    <task id="LOCAL-00001" summary="miguel">
+      <created>1648650969448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648650969448</updated>
+    </task>
+    <task id="LOCAL-00002" summary="miguel">
+      <created>1648651169537</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648651169537</updated>
+    </task>
+    <task id="LOCAL-00003" summary="miguel">
+      <created>1648652936843</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648652936843</updated>
+    </task>
+    <task id="LOCAL-00004" summary="miguel">
+      <created>1648653341351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648653341351</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="miguel" />
+    <option name="LAST_COMMIT_MESSAGE" value="miguel" />
   </component>
 </project>

@@ -3,5 +3,5 @@
     $dbUsername= 'root';
     $Password= '';
     $dbName= 'bd_fichard';
-    $conexao = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro'); 
+    $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 ?>

@@ -1,0 +1,119 @@
+Index: inicial.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nsession_start();\r\n?>\r\n    <!DOCTYPE html>\r\n    <html lang=\"en\">\r\n    <head>\r\n        <meta charset=\"UTF-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n        <title>Exercicios Online</title>\r\n        <link rel=\"stylesheet\" href=\"estilos/styleIncial.css\">\r\n        <link rel=\"icon\" href=\"images/Closed_Book_Icon.svg.png\">\r\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\r\n        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>\r\n    </head>\r\n    <body>\r\n        <header class=\"cabecalho\">\r\n            <img id=\"img\" src=\"images/Closed_Book_Icon.svg.png\"  alt=\"\" width=\"3%\" height=\"8%\">\r\n            <nav class=\"cabecalho-menu\" >\r\n                <a href=\"\" class=\"cabecalho-menu-item\">Início</a>\r\n                <a href=\"listaExercicios.php\" class=\"cabecalho-menu-item\">Sobre o projeto</a>\r\n                <a href=\"listaExercicios.php\" class=\"cabecalho-menu-item\">Inscrições</a>\r\n\r\n                <a href=\"sair.php\" class=\"cabecalho-menu-item\" name=\"select\" value=\"select\" >Sair</a>\r\n            \r\n            </nav>\r\n        </header>\r\n    <main>\r\n        <section class=\"conteudo-principal\">\r\n            <div class=\"conteudo-principal-escrito\">\r\n                <h1 class=\"conteudo-principal-escrito-titulo\">Bem-vindo</h1>\r\n                <h2 class=\"conteudo-principal-escrito-subtitulo\">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, harum laudantium commodi magni doloremque, eveniet obcaecati nemo ab voluptatem, nisi animi amet autem deserunt ratione perspiciatis. Consequatur accusantium praesentium reprehenderit.</h2>\r\n                <button name=\"butao\" class=\"butao\" value=\"inscrever\" >Quero me inscrever</button>\r\n            </div>\r\n\r\n            <div style=\"margin-top: 2%;width:642px;height:448px;\">\r\n                <div >\r\n                    <div >\r\n                    <img src=\"images/foto.svg\" class=\"d-block w-100\" alt=\"...\"style=\"width:642px;height:448px;\">\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </section> \r\n    </main>\r\n        <footer>         \r\n            <section class=\"rodape-conteudo\">\r\n                <h2 style=\"padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;\">Redes Sociais</h2>               \r\n                    <section class=\"sec-img\" style=\"padding-bottom: 2px;\">\r\n                         <img src=\"images\\1164349_circle_instagram_logo_media_network_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296499_fb_facebook_facebook logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296515_bird_tweet_twitter_twitter logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296504_forum_reddit_reddit logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                    </section>                        \r\n            </section>         \r\n        </footer>\r\n    </body>\r\n    </html>\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/inicial.php b/inicial.php
+--- a/inicial.php	(revision c107deef415d6a1659a4fd390993bde9ef9e0da5)
++++ b/inicial.php	(date 1648645972471)
+@@ -1,5 +1,7 @@
+ <?php
+ session_start();
++//ALOOOOOOOOOOOOOOOOOG
++//fafa
+ ?>
+     <!DOCTYPE html>
+     <html lang="en">
+@@ -33,11 +35,15 @@
+                 <button name="butao" class="butao" value="inscrever" >Quero me inscrever</button>
+             </div>
+ 
+-            <div style="margin-top: 2%;width:642px;height:448px;">
+-                <div >
+-                    <div >
++            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 2%;width:642px;height:448px;">
++                <div class="carousel-inner">
++                    <div class="carousel-item active">
+                     <img src="images/foto.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
++                    </div>
++                    <div class="carousel-item">
++                    <img src="images/foto.svg" class="d-block w-100" alt="..." style="width:642px;height:448px;">
+                     </div>
++
+                 </div>
+ 
+             </div>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"36a9a71e-681e-408a-b790-5888be4c7a80\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26hk4uQwiL7aKRAeqfmhliYoZtg\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"codeWithMe.voiceChat.enabledByDefault\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settings.ide.settings.web.browsers\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"36a9a71e-681e-408a-b790-5888be4c7a80\" name=\"Changes\" comment=\"\" />\r\n      <created>1647883017179</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1647883017179</updated>\r\n      <workItem from=\"1647883018448\" duration=\"1325000\" />\r\n      <workItem from=\"1647946129343\" duration=\"303000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c107deef415d6a1659a4fd390993bde9ef9e0da5)
++++ b/.idea/workspace.xml	(date 1648646549682)
+@@ -4,7 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="" />
++    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/inicial.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/listaExercicios.php" beforeDir="false" afterPath="$PROJECT_DIR$/listaExercicios.php" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -12,6 +16,9 @@
+   </component>
+   <component name="ComposerSettings">
+     <execution />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectId" id="26hk4uQwiL7aKRAeqfmhliYoZtg" />
+   <component name="ProjectViewState">
+@@ -41,10 +48,27 @@
+       <updated>1647883017179</updated>
+       <workItem from="1647883018448" duration="1325000" />
+       <workItem from="1647946129343" duration="303000" />
++      <workItem from="1648481462480" duration="762000" />
++      <workItem from="1648567779734" duration="6000" />
++      <workItem from="1648640881158" duration="33000" />
++      <workItem from="1648644054742" duration="1502000" />
++      <workItem from="1648645584988" duration="958000" />
+     </task>
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: listaExercicios.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nsession_start();\r\n\r\nif (isset( $_POST ['submit2'])) {\r\n    header(\"Location: exercicio2.php\");\r\n}\r\nif (isset( $_POST ['submit3'])) {\r\n    header(\"Location: exercicio3.php\");\r\n}\r\n?>\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link rel=\"stylesheet\" href=\"estilos/styleExercicios.css\">\r\n    <link rel=\"icon\" href=\"images/Closed_Book_Icon.svg.png\">\r\n    <title>Exercícios</title>\r\n    \r\n</head>\r\n<body>\r\n    <header class=\"cabecalho\">\r\n        <img  id=\"img\"src=\"images/Closed_Book_Icon.svg.png\"  alt=\"\" width=\"3%\" height=\"8%\">\r\n        \r\n        <nav class=\"cabecalho-menu\">\r\n            <a href=\"inicial.php\" class=\"cabecalho-menu-item\">Início</a>\r\n            <a href=\"\" class=\"cabecalho-menu-item\">Exercícios</a>\r\n            <a href=\"sair.php\" class=\"cabecalho-menu-item\">Sair</a>\r\n        </nav>\r\n    </header>\r\n    <section id=\"sec-titulo\"\">\r\n        <div class=\"break\"></div>\r\n        <h1 id=\"titulo\">Escolha um dos nossos exercícios</h1>\r\n    </section>\r\n    <main>\r\n        <div class=\"break\"></div>\r\n        <section class=\"sec-exercicios\">\r\n            <form id=\"exercicio1\"action=\"exercicio1.php\" method=\"post\">            \r\n                     <h2 class=\"exercicio-titulo\">Exercício 1</h2>                     \r\n                        <h3 id=\"Exercicio1-subtitulo\" class=\"conteudo-principal-escrito-subtitulo\">Receber 10 números separados por vírgula em um único campo de um formulário e ibir o maior e o menor deles.</h3>                                                  \r\n                    <button class=\"butao\"type=\"submit\" name=\"submit1\" id=\"submit1\">Vamos ver!</button> \r\n            </form>\r\n            <form id=\"exercicio2\"action=\"listaExercicios.php\" method=\"post\">\r\n                <h2 class=\"exercicio-titulo\">Exercício 2</h2>                   \r\n                        <h3 class=\"conteudo-principal-escrito-subtitulo\">Escrever uma senha aleatória de 8 dígitos podendo conter letras, números e \r\n                            símbolos.</h3>      \r\n                            <button class=\"butao\"type=\"submit\" name=\"submit2\" id=\"submit2\">Vamos ver!</button>                         \r\n              </form>\r\n            <form id=\"exercicio3\"action=\"listaExercicios.php\" method=\"post\">\r\n                <h2 class=\"exercicio-titulo\">Exercício 3</h2>               \r\n                   <h3 class=\"conteudo-principal-escrito-subtitulo\">Recebe 2 números num formulário e mostra 20 números aleatórios entre os 2 \r\n                    números dados.</h3> \r\n                    <button class=\"butao\"type=\"submit\" name=\"submit3\" id=\"submit3\">Vamos ver!</button>                        \r\n            </form>\r\n        </section>\r\n    </main>\r\n    <br>\r\n       <footer>\r\n            <section class=\"rodape-conteudo\">\r\n                <h2 style=\"padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;\">Redes Sociais</h2>               \r\n                    <section class=\"sec-img\">\r\n                         <img src=\"images\\1164349_circle_instagram_logo_media_network_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296499_fb_facebook_facebook logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296515_bird_tweet_twitter_twitter logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                        <img src=\"images\\5296504_forum_reddit_reddit logo_icon.svg\" alt=\"\" width=\"4%\" height=\"8%\">\r\n                    </section>                        \r\n            </section>                  \r\n        </footer>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/listaExercicios.php b/listaExercicios.php
+--- a/listaExercicios.php	(revision c107deef415d6a1659a4fd390993bde9ef9e0da5)
++++ b/listaExercicios.php	(date 1648645972529)
+@@ -17,8 +17,8 @@
+     <link rel="stylesheet" href="estilos/styleExercicios.css">
+     <link rel="icon" href="images/Closed_Book_Icon.svg.png">
+     <title>Exercícios</title>
+-    
+ </head>
++
+ <body>
+     <header class="cabecalho">
+         <img  id="img"src="images/Closed_Book_Icon.svg.png"  alt="" width="3%" height="8%">
