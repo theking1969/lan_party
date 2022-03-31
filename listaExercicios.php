@@ -29,7 +29,7 @@ if (isset( $_POST ['submit3'])) {
             <a href="sair.php" class="cabecalho-menu-item">Sair</a>
         </nav>
     </header>
-    <section id="sec-titulo"">
+    <section id="sec-titulo">
         <div class="break"></div>
         <h1 id="titulo">Inscreva-se!</h1>
     </section>

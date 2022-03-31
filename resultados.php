@@ -36,6 +36,24 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
     <section class="conteudo-principal">
         <div class="conteudo-principal-escrito">
             <form method="post" action="resultados.php">
+                <label>Jogo: </label>
+                <select name="jogo">
+                    <?php
+                    $sql = "SELECT ID_equipa1, ID_equipa2 FROM jogos";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while ($row = $result->fetch_assoc()) {
+                            $equipas = array($row["Equipa1"]);
+                            foreach ($equipas as $equipa) {
+                                echo '<option>' . $equipa . '</option>';
+                            }
+                        }
+                    }
+                    ?>
+                </select>
+                <br>
             <label>Equipa Vencedora: </label>
             <select name="equipavence">
                 <?php
