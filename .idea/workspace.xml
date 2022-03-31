@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="miguel" />
+    <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="miguel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listaExercicios.php" beforeDir="false" afterPath="$PROJECT_DIR$/listaExercicios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados.php" beforeDir="false" afterPath="$PROJECT_DIR$/resultados.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +54,8 @@
       <workItem from="1648640881158" duration="33000" />
       <workItem from="1648644054742" duration="1502000" />
       <workItem from="1648645584988" duration="958000" />
-      <workItem from="1648646600328" duration="6896000" />
+      <workItem from="1648646600328" duration="7445000" />
+      <workItem from="1648739118238" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="miguel">
       <created>1648650969448</created>
@@ -80,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648653341351</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="miguel">
+      <created>1648653965203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648653965203</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
