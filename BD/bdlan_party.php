@@ -14,6 +14,7 @@ $equipa_resultado = array(
 
 /* `bdlan_party`.`equipas` */
 $equipas = array(
+  array('ID_Equipa' => '1','Nome_Equipa' => 'teste','Estado_equipa' => '1')
 );
 
 /* `bdlan_party`.`estadojogo` */
@@ -34,6 +35,7 @@ $estapas = array(
 
 /* `bdlan_party`.`jogadores` */
 $jogadores = array(
+  array('id_jogadores' => '1','Nome_jogadores' => 'dsfbg','NumESCO' => '234','Email' => 'sdfgbh','Steam_ID' => '21ews','ID_equipa' => '1','ID_estadoJogador' => '1')
 );
 
 /* `bdlan_party`.`jogos` */
