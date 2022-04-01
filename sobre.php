@@ -16,13 +16,12 @@ session_start();
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="cabecalho">
-            <img id="img" src="images/icon_lan-party.png"  alt="" width="3%" height="8%">
+    <header class="cabecalho">
+            <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
             <nav class="cabecalho-menu" >
-                <a href="" class="cabecalho-menu-item">Início</a>
+                <a href="index.php" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-                <a href="listaExercicios.php" class="cabecalho-menu-item">Inscrições</a>
-
+                <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
                 <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
             
             </nav>

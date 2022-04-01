@@ -24,7 +24,7 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 <header class="cabecalho">
     <img id="img" src="images/Closed_Book_Icon.svg.png"  alt="" width="3%" height="8%">
     <nav class="cabecalho-menu" >
-        <a href="" class="cabecalho-menu-item">Início</a>
+        <a href="index.php" class="cabecalho-menu-item">Início</a>
         <a href="listaExercicios.php" class="cabecalho-menu-item">Sobre o projeto</a>
         <a href="listaExercicios.php" class="cabecalho-menu-item">õesIncriç</a>
 
