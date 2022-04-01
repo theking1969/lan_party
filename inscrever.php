@@ -38,6 +38,7 @@ if (isset( $_POST ['submit3'])) {
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <form action="" class="form-escrever">
+                    <h2 class="form-titulo">Inscrição</h2>
                     <input type="text" class="txtNome" placeholder="Nome" required>
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required>
                     <input type="text" class="txtEmail" placeholder="E-mail" required>

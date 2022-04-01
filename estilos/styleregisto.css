@@ -39,11 +39,18 @@ form{
     margin-top:20%;
     border-radius: 30px;
     background-color:rgba(86, 45, 97, 0.876);
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content:center;
     gap: 1.5rem;
+}
+.form-titulo{
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2em; 
 }
 input{
     height: 37px;
@@ -53,7 +60,6 @@ input{
     outline: 0;  
     border: none;
 }
-
 .conteudo-principal{
     display: flex;
     flex-direction: row;
