@@ -107,6 +107,7 @@ CREATE TABLE `jogadores` (
   `Nome_jogadores` text NOT NULL,
   `NumESCO` int(11) NOT NULL,
   `Email` text NOT NULL,
+  `Turma` text NOT NULL,
   `Steam_ID` text NOT NULL,
   `ID_equipa` int(11) NOT NULL,
   `ID_estadoJogador` int(11) NOT NULL
