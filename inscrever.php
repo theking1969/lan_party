@@ -15,7 +15,7 @@ if (isset( $_POST ['submit3'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
-    <link rel="icon" href="images/Closed_Book_Icon.svg.png">
+    <link rel="icon" href="images/icon_landingpage.png">
     <title>inscrever</title>
 </head>
 
@@ -45,13 +45,13 @@ if (isset( $_POST ['submit3'])) {
           <h1 id="label-login">Inscrição</h1>
               <section class="secao">
                   <label class="formulario-label">Número aluno</label>
-                   <input class="formulario-box" name="email" type="email" placeholder="Nº">
+                   <input class="formulario-box" name="email" type="email" placeholder="NºAluno">
                    <span class="error" style="color: #FF0000;"></span>
               </section>
 
               <section class="secao2">                      
-                  <label class="formulario-label" for="lblnome">Palavra-passe</label>
-                  <input class="formulario-box" name="pass" type="password" placeholder="Palavra-passe">
+                  <label class="formulario-label" for="lblnome">Nome</label>
+                  <input class="formulario-box" name="pass" type="password" placeholder="Nome">
                   <span class="error" style="color: #FF0000;"></span>
               </section>
               <section class="btnLinha">
