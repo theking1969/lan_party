@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Mar-2022 às 15:41
+-- Tempo de geração: 01-Abr-2022 às 10:52
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -42,8 +42,15 @@ CREATE TABLE `equipa/resultado` (
 CREATE TABLE `equipas` (
   `ID_Equipa` int(11) NOT NULL,
   `Nome_Equipa` text NOT NULL,
-  `Estado_equipa` int(11) NOT NULL
+  `Estado_equipa` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `equipas`
+--
+
+INSERT INTO `equipas` (`ID_Equipa`, `Nome_Equipa`, `Estado_equipa`) VALUES
+(1, 'teste', 1);
 
 -- --------------------------------------------------------
 
@@ -63,8 +70,8 @@ CREATE TABLE `estadojogo` (
 --
 
 CREATE TABLE `estado_equipa` (
-  `ID_estado` int(11) NOT NULL,
-  `Estado` text NOT NULL
+  `ID_estado_equipa` int(11) NOT NULL,
+  `Estado_equipa` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -85,8 +92,8 @@ CREATE TABLE `estado_jogador` (
 --
 
 CREATE TABLE `estapas` (
-  `ID_estapas` int(11) NOT NULL,
-  `Estapas` text NOT NULL
+  `ID_etapas` int(11) NOT NULL,
+  `Etapas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -97,13 +104,20 @@ CREATE TABLE `estapas` (
 
 CREATE TABLE `jogadores` (
   `id_jogadores` int(11) NOT NULL,
-  `Nome_jogadores` varchar(100) NOT NULL,
+  `Nome_jogadores` text NOT NULL,
   `NumESCO` int(11) NOT NULL,
   `Email` text NOT NULL,
   `Steam_ID` text NOT NULL,
   `ID_equipa` int(11) NOT NULL,
   `ID_estadoJogador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `jogadores`
+--
+
+INSERT INTO `jogadores` (`id_jogadores`, `Nome_jogadores`, `NumESCO`, `Email`, `Steam_ID`, `ID_equipa`, `ID_estadoJogador`) VALUES
+(1, 'dsfbg', 234, 'sdfgbh', '21ews', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -142,13 +156,16 @@ CREATE TABLE `resultados` (
 -- Índices para tabela `equipa/resultado`
 --
 ALTER TABLE `equipa/resultado`
-  ADD PRIMARY KEY (`ID_equipa_resultado`);
+  ADD PRIMARY KEY (`ID_equipa_resultado`),
+  ADD KEY `ID_equipa` (`ID_equipa`),
+  ADD KEY `ID_resultado` (`ID_resultado`);
 
 --
 -- Índices para tabela `equipas`
 --
 ALTER TABLE `equipas`
-  ADD PRIMARY KEY (`ID_Equipa`);
+  ADD PRIMARY KEY (`ID_Equipa`),
+  ADD KEY `Estado_equipa` (`Estado_equipa`);
 
 --
 -- Índices para tabela `estadojogo`
@@ -160,7 +177,7 @@ ALTER TABLE `estadojogo`
 -- Índices para tabela `estado_equipa`
 --
 ALTER TABLE `estado_equipa`
-  ADD PRIMARY KEY (`ID_estado`);
+  ADD PRIMARY KEY (`ID_estado_equipa`);
 
 --
 -- Índices para tabela `estado_jogador`
@@ -172,25 +189,33 @@ ALTER TABLE `estado_jogador`
 -- Índices para tabela `estapas`
 --
 ALTER TABLE `estapas`
-  ADD PRIMARY KEY (`ID_estapas`);
+  ADD PRIMARY KEY (`ID_etapas`);
 
 --
 -- Índices para tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  ADD PRIMARY KEY (`id_jogadores`);
+  ADD PRIMARY KEY (`id_jogadores`),
+  ADD KEY `ID_estadoJogador` (`ID_estadoJogador`),
+  ADD KEY `ID_equipa` (`ID_equipa`);
 
 --
 -- Índices para tabela `jogos`
 --
 ALTER TABLE `jogos`
-  ADD PRIMARY KEY (`ID_jogos`);
+  ADD PRIMARY KEY (`ID_jogos`),
+  ADD KEY `ID_equipa1` (`ID_equipa1`),
+  ADD KEY `ID_equipa2` (`ID_equipa2`),
+  ADD KEY `ID_etapas` (`ID_etapas`),
+  ADD KEY `Estado_jogo` (`Estado_jogo`);
 
 --
 -- Índices para tabela `resultados`
 --
 ALTER TABLE `resultados`
-  ADD PRIMARY KEY (`ID_Resultados`);
+  ADD PRIMARY KEY (`ID_Resultados`),
+  ADD KEY `ID_jogo` (`ID_jogo`),
+  ADD KEY `ID_equipa_vencedora` (`ID_equipa_vencedora`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -206,7 +231,7 @@ ALTER TABLE `equipa/resultado`
 -- AUTO_INCREMENT de tabela `equipas`
 --
 ALTER TABLE `equipas`
-  MODIFY `ID_Equipa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Equipa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `estadojogo`
@@ -218,7 +243,7 @@ ALTER TABLE `estadojogo`
 -- AUTO_INCREMENT de tabela `estado_equipa`
 --
 ALTER TABLE `estado_equipa`
-  MODIFY `ID_estado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_estado_equipa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `estado_jogador`
@@ -230,13 +255,13 @@ ALTER TABLE `estado_jogador`
 -- AUTO_INCREMENT de tabela `estapas`
 --
 ALTER TABLE `estapas`
-  MODIFY `ID_estapas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_etapas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  MODIFY `id_jogadores` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_jogadores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `jogos`
@@ -249,6 +274,47 @@ ALTER TABLE `jogos`
 --
 ALTER TABLE `resultados`
   MODIFY `ID_Resultados` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `equipa/resultado`
+--
+ALTER TABLE `equipa/resultado`
+  ADD CONSTRAINT `equipa/resultado_ibfk_1` FOREIGN KEY (`ID_equipa`) REFERENCES `equipas` (`ID_Equipa`),
+  ADD CONSTRAINT `equipa/resultado_ibfk_2` FOREIGN KEY (`ID_resultado`) REFERENCES `resultados` (`ID_Resultados`);
+
+--
+-- Limitadores para a tabela `jogadores`
+--
+ALTER TABLE `jogadores`
+  ADD CONSTRAINT `jogadores_ibfk_1` FOREIGN KEY (`ID_equipa`) REFERENCES `equipas` (`ID_Equipa`),
+  ADD CONSTRAINT `estado_jogador_ibfk_1` FOREIGN KEY (`ID_EstadoJogador`) REFERENCES `jogadores` (`ID_estadoJogador`);
+
+--
+-- Limitadores para a tabela `jogos`
+--
+ALTER TABLE `jogos`
+  ADD CONSTRAINT `jogos_ibfk_1` FOREIGN KEY (`ID_etapas`) REFERENCES `estapas` (`ID_etapas`),
+  ADD CONSTRAINT `jogos_ibfk_2` FOREIGN KEY (`Estado_jogo`) REFERENCES `estadojogo` (`ID_EstadoJogo`),
+  ADD CONSTRAINT `jogos_ibfk_3` FOREIGN KEY (`ID_equipa1`) REFERENCES `equipas` (`ID_Equipa`),
+  ADD CONSTRAINT `jogos_ibfk_4` FOREIGN KEY (`ID_equipa2`) REFERENCES `equipas` (`ID_Equipa`);
+
+--
+-- Limitadores para a tabela `resultados`
+--
+ALTER TABLE `resultados`
+  ADD CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`ID_jogo`) REFERENCES `jogos` (`ID_jogos`);
+  
+  --
+  --
+  --
+  
+  ALTER TABLE `estado_equipa`
+  ADD CONSTRAINT `estado_equipa_ibfk_1` FOREIGN KEY (`ID_estado_equipa`) REFERENCES `equipas` (`Estado_equipa`);
+  
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
