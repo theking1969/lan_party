@@ -32,34 +32,30 @@ if (isset( $_POST ['submit3'])) {
         </header>
     <section id="sec-titulo">
         <div class="break"></div>
-        <h1 id="titulo">Inscreva-se!</h1>
+        <h1 id="titulo">Inscreve-te!</h1>
     </section>
     <main>
-    <div class="sec-login">
-        
-        <form class="formulario-fundo-esquerda" method="post">
-        <img class="img-form" src="images/Online games addiction-bro.svg" class="d-block w-100" alt="..."style="width:502px;height:308px;">
+         <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <form action="" class="form-escrever">
+                    <input type="text" class="txtNome" placeholder="Nome" required>
+                    <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required>
+                    <input type="text" class="txtEmail" placeholder="E-mail" required>
+                    <input type="text" class="txtSteam" placeholder="ID Steam" required>
+                    <input type="text" class="txtEquipa" placeholder="Escolha a sua equipa" required>
 
-      </form>
-      <form class="formulario-fundo" method="post">
-          <h1 id="label-login">Inscrição</h1>
-              <section class="secao">
-                  <label class="formulario-label">Número aluno</label>
-                   <input class="formulario-box" name="email" type="email" placeholder="NºAluno">
-                   <span class="error" style="color: #FF0000;"></span>
-              </section>
+                    <button class="botao">Inscrever</button>
+                </form>
+            </div>
 
-              <section class="secao2">                      
-                  <label class="formulario-label" for="lblnome">Nome</label>
-                  <input class="formulario-box" name="pass" type="password" placeholder="Nome">
-                  <span class="error" style="color: #FF0000;"></span>
-              </section>
-              <section class="btnLinha">
-                   <button class="butao"type="submit" name="submitLogin" id="submitLogin">Inscrever</button>   
-              </section>
-      </form>
-    
-  </div>
+            <div style="margin-top: 2%;width:642px;height:448px;">
+                <div>
+                    <div>
+                    <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
+                    </div>
+                </div>
+            </div>
+        </section> 
     </main>
     <br>
 </body>

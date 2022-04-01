@@ -33,69 +33,59 @@ header{
     color: white;
     text-decoration: none;
 }
-#label-login{
-    font-size: 62px;
+form{
+    width: 445px;
+    height: 450px;
+    margin-top:20%;
+    border-radius: 30px;
+    background-color:rgba(86, 45, 97, 0.876);
     display: flex;
-    justify-content: center;
-    color: rgba(31, 31, 31, 0.817);
-    margin-top: 5%;
-    font-family: 'Aclonica', sans-serif;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    gap: 1.5rem;
 }
-.sec-login{
+input{
+    height: 37px;
+    width: 250px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1em;
+    outline: 0;  
+    border: none;
+}
+
+.conteudo-principal{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+}
+.conteudo-principal-escrito{
 
-}
-.formulario-fundo{
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.863);
-    align-items: center;
-    width: 445px;
-    height: 450px;
-    gap: 35px;
-    margin-right: 2rem  ;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    gap: 32px;
+    justify-content: center;
 }
-.formulario-fundo-esquerda{
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    background-color: rgba(80, 80, 80, 0.863);
-    width: 445px;
-    height: 450px;
-    gap: 40px;
+.conteudo-principal-escrito-subtitulo{
+    font-family: 'Cabin', sans-serif;
+    font-size: 50px;
+    line-height: 61px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+   font-family: Cabin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    max-width: 500px;
 }
-.img-form
-{
-    display: flex;
-    justify-content:center;
-    margin-top:2.5rem;
-}
-.formulario-box{
-    height: 37px;
-    width: 250px;
-    padding: 1em;
-    margin-bottom: 10px;
-    outline: 0;  
-    /* SERVE PARA TIRAR O SELECT DA BOX */
-    border-radius: 15px;
-    font-size: 1em;
-    border: 1px solid #939393e9;
-    font-family: 'Roboto', sans-serif;
-}
-.btnLinha{
-    display: flex;
-    gap: 10px;
-}
-.butao{   
+.botao{   
     background-color: #f4960bcf;
-    width: 250px;
+    width: 210px;
     height: 50px;
     border: none;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
@@ -104,47 +94,12 @@ header{
     font-size: 19px; 
     color: #ffffff;
 }
-.butao2{   
-    background-color: #00a2ff;
-    width: 150px;
-    height: 50px;
-    border: none;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Cabin', sans-serif;
-    border-radius: 31px;
-    font-weight: 28px;
-    font-size: 19px;
-    color: #ffffff;
-}
-
-.butao:hover{
-    background: #0370ff;
-}
-.butao2:hover{
-    background: #c7d8f0;
-}
-.secao{
-    display: flex;
-    flex-direction: column;
-}
-.secao2{
-    margin-top: 2%;    
-    display: flex;
-    flex-direction: column;
-}
-.formulario-label{
-    padding-bottom: 5px;
-    font-family: 'Righteous', cursive;
-}
-.error{
-    font-family: 'Righteous', cursive;
-    color: #FF0000;
-}
-.div-lembrar{
-    display: flex;
-    flex-direction: row;
+.botao:hover{
+    background-color: transparent;
+    border: 2px solid white;
 }
 #titulo{
+    font-size: 3rem;
     margin-top: 2rem;
     text-align: center;
     color: white;
