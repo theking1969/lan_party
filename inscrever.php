@@ -44,7 +44,10 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtEmail" placeholder="E-mail" required>
                     <input type="text" class="txtSteam" placeholder="ID Steam" required>
                     <input type="text" class="txtEquipa" placeholder="Escolha a sua equipa" required>
-
+                    <div class="checkbox">
+                        <input type="checkbox" name="Equipa" value="Tenho uma equipa">
+                        <h3 style="margin-left: -20%; color: white;margin-top: 2%;">Tenho uma Equipa</h3>
+                    </div>
                     <button class="botao">Inscrever</button>
                 </form>
             </div>

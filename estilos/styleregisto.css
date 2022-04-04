@@ -60,6 +60,14 @@ input{
     outline: 0;  
     border: none;
 }
+
+.checkbox{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -30%;
+}
+
 .conteudo-principal{
     display: flex;
     flex-direction: row;
