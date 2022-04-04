@@ -101,6 +101,7 @@ input{
     color: #ffffff;
 }
 .botao:hover{
+    
     background-color: transparent;
     border: 2px solid white;
 }
@@ -111,6 +112,41 @@ input{
     color: white;
     font-family: 'Cabin', cursive;
 
+}
+footer{
+    margin-top: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #dadada;
+}
+.titulo-footer{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+}
+.rodape-conteudo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;  
+}
+.footer-menu-nav{
+    display: flex;
+    gap: 150px;
+}
+.footer-nav-item{
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+.sec-img{
+    margin-bottom: 2px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
 }
 @media only screen and (max-width: 950px) {
 

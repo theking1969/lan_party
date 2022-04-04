@@ -49,15 +49,24 @@ if (isset( $_POST ['submit3'])) {
                 </form>
             </div>
 
-            <div style="margin-top: 2%;width:642px;height:448px;">
-                <div>
-                    <div>
+            <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">              
+                   
                     <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
-                    </div>
-                </div>
+                    
             </div>
         </section> 
     </main>
+    <footer>
+    <section class="rodape-conteudo">
+        <h2 style="padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;">Patrocinadores</h2>
+        <section class="sec-img" style="padding-bottom: 2px;">
+            <img src="images/is.logo.wide.png" alt="">
+            <img src="images\5296499_fb_facebook_facebook logo_icon.svg" alt="" width="4%" height="8%">
+            <img src="images\5296515_bird_tweet_twitter_twitter logo_icon.svg" alt="" width="4%" height="8%">
+            <img src="images\5296504_forum_reddit_reddit logo_icon.svg" alt="" width="4%" height="8%">
+        </section>
+    </section>
+</footer>
     <br>
 </body>
 </html>
