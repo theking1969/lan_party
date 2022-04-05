@@ -14,7 +14,7 @@ body{
     background: rgb(32,22,83);
     background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
     background-attachment: fixed;
-    min-height: 100%;
+    min-height: auto;
 }
 header{
     display:flex;
@@ -137,6 +137,7 @@ footer{
 }
 .rodape-conteudo{
     display:flex;
+    margin-top: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -200,5 +201,15 @@ footer{
    
     .formulario-fundo{           
       margin-left: 2rem;
+    }
+}
+@media only screen and (max-width: 1200px){
+    footer{
+        margin-top: auto;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #dadada;
     }
 }
