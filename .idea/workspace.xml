@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="miguel">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sobre.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sobre.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_12__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2022_14_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sobre.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sobre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estilos/styleregisto.css" beforeDir="false" afterPath="$PROJECT_DIR$/estilos/styleregisto.css" afterDir="false" />
+>>>>>>> 0d0b57774293b4767927f43a49cb86684d8a8ad7
       <change beforePath="$PROJECT_DIR$/inscrever.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscrever.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +74,12 @@
       <workItem from="1648645584988" duration="958000" />
       <workItem from="1648646600328" duration="7445000" />
       <workItem from="1648739118238" duration="2347000" />
+<<<<<<< HEAD
       <workItem from="1648802619990" duration="7092000" />
+=======
+      <workItem from="1648802619990" duration="924000" />
+      <workItem from="1649090299804" duration="98000" />
+>>>>>>> 0d0b57774293b4767927f43a49cb86684d8a8ad7
     </task>
     <task id="LOCAL-00001" summary="miguel">
       <created>1648650969448</created>

@@ -37,15 +37,18 @@ if (isset( $_POST ['submit3'])) {
     <main>
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <form action="" class="form-escrever">
-                    <h2 class="form-titulo">Inscrição</h2>
+                <form action="" class="form-escrever" style="height: 20%;">
+                    <h2 class="form-titulo" style="margin-top: 5%;">Inscrição</h2>
                     <input type="text" class="txtNome" placeholder="Nome" required>
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required>
                     <input type="text" class="txtEmail" placeholder="E-mail" required>
                     <input type="text" class="txtSteam" placeholder="ID Steam" required>
                     <input type="text" class="txtEquipa" placeholder="Escolha a sua equipa" required>
-
-                    <button class="botao">Inscrever</button>
+                    <div class="checkbox">
+                        <input type="checkbox" name="Equipa" style="margin-left: -40%;">
+                        <h3 style="color: white;margin-top: -13%; margin-left: 25%">Tenho uma Equipa</h3>
+                    </div>
+                    <button class="botao" style="margin-bottom: 5%;">Inscrever</button>
                 </form>
             </div>
 
