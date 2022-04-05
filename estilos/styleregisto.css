@@ -48,6 +48,7 @@ form{
     gap: 1.5rem;
 }
 .form-titulo{
+    margin-top: 3%;
     color: white;
     font-family: 'Cabin', sans-serif;
     font-size: 2em; 
@@ -139,7 +140,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2%;  
+    margin-bottom: 2%;
 }
 .footer-menu-nav{
     display: flex;
