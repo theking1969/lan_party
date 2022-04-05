@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36a9a71e-681e-408a-b790-5888be4c7a80" name="Changes" comment="miguel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD/bdlan_party.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD/bdlan_party.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD/bdlan_party.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/bdlan_party.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sobre.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sobre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inscrever.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscrever.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="26hk4uQwiL7aKRAeqfmhliYoZtg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,6 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MariaDB&#10;MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -57,7 +66,7 @@
       <workItem from="1648645584988" duration="958000" />
       <workItem from="1648646600328" duration="7445000" />
       <workItem from="1648739118238" duration="2347000" />
-      <workItem from="1648802619990" duration="924000" />
+      <workItem from="1648802619990" duration="7092000" />
     </task>
     <task id="LOCAL-00001" summary="miguel">
       <created>1648650969448</created>

@@ -73,11 +73,11 @@ if (isset( $_POST ['submit3'])) {
 
 <?php
 function inscrever(){
-    header("Location: exercicio3.php");
+
 }
 
 
-if(isset($_POST['butao'])) {
+if(isset($_POST['botao'])) {
     inscrever();
 }
 ?>
