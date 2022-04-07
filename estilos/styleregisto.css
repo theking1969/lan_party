@@ -131,6 +131,11 @@ input{
     font-family: 'Cabin', cursive;
 
 }
+
+.select{
+    width: 55%;
+}
+
 footer{
     margin-top: auto;
     position: fixed;

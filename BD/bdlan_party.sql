@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Abr-2022 às 17:34
+-- Tempo de geração: 07-Abr-2022 às 18:12
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -180,7 +180,54 @@ CREATE TABLE `resultados` (
 --
 -- Índices para tabelas despejadas
 --
+CREATE TABLE `turmas` (
+                          `ID_Turma` int(11) NOT NULL,
+                          `Turma` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `turmas`
+--
+
+INSERT INTO `turmas` (`ID_Turma`, `Turma`) VALUES
+                                               (1, 'PSI6'),
+                                               (2, 'AI8'),
+                                               (3, 'CD1'),
+                                               (4, 'CP9'),
+                                               (5, 'GD5'),
+                                               (6, 'MEBE2'),
+                                               (7, 'A18'),
+                                               (8, 'G15'),
+                                               (9, 'GD4'),
+                                               (10, 'H13'),
+                                               (11, 'T8'),
+                                               (12, 'A17'),
+                                               (13, 'AS6'),
+                                               (14, 'CP8'),
+                                               (15, 'G14'),
+                                               (16, 'H12'),
+                                               (17, 'VM1');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `turmas`
+--
+ALTER TABLE `turmas`
+    ADD PRIMARY KEY (`ID_Turma`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `turmas`
+--
+ALTER TABLE `turmas`
+    MODIFY `ID_Turma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+COMMIT;
 --
 -- Índices para tabela `equipa/resultado`
 --

@@ -37,13 +37,36 @@ if (isset( $_POST ['submit3'])) {
     <main>
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <form action="" class="form-escrever" style="height: 20%;">
+                <form action="inscrever.php" class="form-escrever" style="height: 20%;">
                     <h2 class="form-titulo">Inscrição</h2>
-                    <input type="text" class="txtNome" placeholder="Nome" required>
-                    <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required>
-                    <input type="text" class="txtEmail" placeholder="E-mail" required>
-                    <input type="text" class="txtSteam" placeholder="ID Steam" required>
-                    <input type="text" class="txtEquipa" placeholder="Escolha a sua equipa" required>
+                    <input type="text" class="txtNome" placeholder="Nome" required name="nome">
+                    <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
+                    <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
+                    <select class="select" name="turma">
+                        <option>Selecione uma Turma</option>
+                        <?php
+                        $dbHost= 'Localhost';
+                        $dbUsername= 'root';
+                        $Password= '';
+                        $dbName= 'bdlan_party';
+                        $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
+
+                        $sql = "SELECT  FROM jogadores";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                    echo "<option>$row</option>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+
+                        mysqli_close($conn);
+                        ?>
+                    </select>
+                    <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                     <div class="checkbox">
                         <input type="checkbox" id="check" name="Equipa">
                         <h3 class="teste">Tenho uma Equipa</h3>
@@ -76,11 +99,38 @@ if (isset( $_POST ['submit3'])) {
 
 <?php
 function inscrever(){
+    if (isset($_POST['nome'])){
+        if (isset($_POST['numaluno'])){
+            if(isset($_POST['email'])){
+                if (isset($_POST['idsteam'])){
+                    $dbHost= 'Localhost';
+                    $dbUsername= 'root';
+                    $Password= '';
+                    $dbName= 'bdlan_party';
+                    $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 
+                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ')';
+
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                }
+            }
+        }
+    }
 }
 
 
 if(isset($_POST['botao'])) {
     inscrever();
+}
+
+
+if (isset($_POST['Equipa'])){
+
 }
 ?>
