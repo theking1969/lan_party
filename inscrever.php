@@ -112,7 +112,7 @@ function inscrever(){
                     $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ')';
 
                     if (mysqli_query($conn, $sql)) {
-                        echo "New record created successfully";
+                        echo "Inscrito com sucesso!";
                     } else {
                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                     }
