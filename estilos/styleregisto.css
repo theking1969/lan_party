@@ -68,6 +68,16 @@ input{
     flex-direction: row;
 }
 
+#check{
+    margin-left: -30%;
+}
+
+.teste{
+    color: white;
+    margin-left: -20%;
+    margin-top: 2%;
+}
+
 .conteudo-principal{
     display: flex;
     flex-direction: row;
