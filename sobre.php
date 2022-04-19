@@ -28,9 +28,6 @@ session_start();
         </header>
     <main>
         <h1>Sobre este projeto.</h1>
-        
-        
-
     </main>
         <footer>         
             <section class="rodape-conteudo">
