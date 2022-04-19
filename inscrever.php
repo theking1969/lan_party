@@ -27,7 +27,7 @@ if (isset( $_POST ['submit3'])) {
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
                 <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
-            
+
             </nav>
         </header>
     <section id="sec-titulo">
@@ -51,12 +51,12 @@ if (isset( $_POST ['submit3'])) {
                 </form>
             </div>
 
-            <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">              
-                   
+            <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">
+
                     <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
-                    
+
             </div>
-        </section> 
+        </section>
     </main>
     <footer>
     <section class="rodape-conteudo">
@@ -85,7 +85,7 @@ function inscrever(){
                     $dbName= 'bdlan_party';
                     $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 
-                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ')';
+                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ',)';
 
                     if (mysqli_query($conn, $sql)) {
                         echo "Inscrito com sucesso!";
@@ -100,13 +100,31 @@ function inscrever(){
     }
 }
 
+function verificationEmail(){
+  const APP_URL = 'http://localhost/auth'; //por resolver
+    // create the activation link
+    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
 
-if(isset($_POST['botao'])) {
-    inscrever();
+    // set email subject & body
+    $subject = 'Confirme a sua conta';
+    $message = <<<MESSAGE
+            Ative a sua conta aqui ->
+            $activation_link
+            MESSAGE;
+    // email header
+    $header = "From:" . $_POST['email'];
+
+    // send the email
+    mail($_POST['email'], $subject, nl2br($message), $header);
+
 }
 
+if(isset($_POST['botao'])) {
+    verificationEmail();
+}
 
 if (isset($_POST['Equipa'])){
 
 }
+
 ?>
