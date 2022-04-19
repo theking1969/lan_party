@@ -42,30 +42,6 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtNome" placeholder="Nome" required name="nome">
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                     <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                    <select class="select" name="turma">
-                        <option>Selecione uma Turma</option>
-                        <?php
-                        $dbHost= 'Localhost';
-                        $dbUsername= 'root';
-                        $Password= '';
-                        $dbName= 'bdlan_party';
-                        $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
-
-                        $sql = "SELECT  FROM jogadores";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            // output data of each row
-                            while($row = $result->fetch_assoc()) {
-                                    echo "<option>$row</option>";
-                            }
-                        } else {
-                            echo "0 results";
-                        }
-
-                        mysqli_close($conn);
-                        ?>
-                    </select>
                     <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                     <div class="checkbox">
                         <input type="checkbox" id="check" name="Equipa">
