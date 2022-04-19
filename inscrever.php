@@ -100,12 +100,31 @@ function inscrever(){
     }
 }
 
+function verificationEmail(){
+  const APP_URL = 'http://localhost/auth'; //por resolver
+    // create the activation link
+    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
+
+    // set email subject & body
+    $subject = 'Confirme a sua conta';
+    $message = <<<MESSAGE
+            Ative a sua conta aqui ->
+            $activation_link
+            MESSAGE;
+    // email header
+    $header = "From:" . $_POST['email'];
+
+    // send the email
+    mail($_POST['email'], $subject, nl2br($message), $header);
+
+}
 
 if(isset($_POST['botao'])) {
-    inscrever();
+    verificationEmail();
 }
 
 if (isset($_POST['Equipa'])){
 
 }
+
 ?>
