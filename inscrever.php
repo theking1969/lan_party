@@ -27,7 +27,7 @@ if (isset( $_POST ['submit3'])) {
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
                 <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
-            
+
             </nav>
         </header>
     <section id="sec-titulo">
@@ -44,27 +44,7 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                     <select class="select" name="turma">
                         <option>Selecione uma Turma</option>
-                        <?php
-                        $dbHost= 'Localhost';
-                        $dbUsername= 'root';
-                        $Password= '';
-                        $dbName= 'bdlan_party';
-                        $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
-
-                        $sql = "SELECT  FROM jogadores";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            // output data of each row
-                            while($row = $result->fetch_assoc()) {
-                                    echo "<option>$row</option>";
-                            }
-                        } else {
-                            echo "0 results";
-                        }
-
-                        mysqli_close($conn);
-                        ?>
+                        
                     </select>
                     <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                     <div class="checkbox">
@@ -75,12 +55,12 @@ if (isset( $_POST ['submit3'])) {
                 </form>
             </div>
 
-            <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">              
-                   
+            <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">
+
                     <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
-                    
+
             </div>
-        </section> 
+        </section>
     </main>
     <footer>
     <section class="rodape-conteudo">
@@ -109,7 +89,7 @@ function inscrever(){
                     $dbName= 'bdlan_party';
                     $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 
-                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ')';
+                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ',)';
 
                     if (mysqli_query($conn, $sql)) {
                         echo "Inscrito com sucesso!";
