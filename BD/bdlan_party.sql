@@ -142,7 +142,6 @@ CREATE TABLE `jogadores` (
   `Nome_jogadores` text NOT NULL,
   `NumESCO` int(11) NOT NULL,
   `Email` text NOT NULL,
-  `Turma` int(11) NOT NULL,
   `Steam_ID` text NOT NULL,
   `ID_equipa` int(11) NOT NULL,
   `ID_estadoJogador` int(11) NOT NULL
@@ -177,57 +176,6 @@ CREATE TABLE `resultados` (
   `ID_jogo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Índices para tabelas despejadas
---
-CREATE TABLE `turmas` (
-                          `ID_Turma` int(11) NOT NULL,
-                          `Turma` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `turmas`
---
-
-INSERT INTO `turmas` (`ID_Turma`, `Turma`) VALUES
-                                               (1, 'PSI6'),
-                                               (2, 'AI8'),
-                                               (3, 'CD1'),
-                                               (4, 'CP9'),
-                                               (5, 'GD5'),
-                                               (6, 'MEBE2'),
-                                               (7, 'A18'),
-                                               (8, 'G15'),
-                                               (9, 'GD4'),
-                                               (10, 'H13'),
-                                               (11, 'T8'),
-                                               (12, 'A17'),
-                                               (13, 'AS6'),
-                                               (14, 'CP8'),
-                                               (15, 'G14'),
-                                               (16, 'H12'),
-                                               (17, 'VM1');
-
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `turmas`
---
-ALTER TABLE `turmas`
-    ADD PRIMARY KEY (`ID_Turma`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `turmas`
---
-ALTER TABLE `turmas`
-    MODIFY `ID_Turma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-COMMIT;
 --
 -- Índices para tabela `equipa/resultado`
 --
@@ -274,7 +222,6 @@ ALTER TABLE `jogadores`
   ADD PRIMARY KEY (`id_jogadores`),
   ADD KEY `ID_estadoJogador` (`ID_estadoJogador`),
   ADD KEY `ID_equipa` (`ID_equipa`),
-  ADD KEY `Turma` (`Turma`);
 
 --
 -- Índices para tabela `jogos`
@@ -373,7 +320,6 @@ ALTER TABLE `equipas`
 -- Limitadores para a tabela `jogadores`
 --
 ALTER TABLE `jogadores`
-  ADD CONSTRAINT `jogadores_ibfk_1` FOREIGN KEY (`Turma`) REFERENCES `turmas` (`ID_Turma`),
   ADD CONSTRAINT `jogadores_ibfk_2` FOREIGN KEY (`ID_estadoJogador`) REFERENCES `estado_jogador` (`ID_EstadoJogador`),
   ADD CONSTRAINT `jogadores_ibfk_3` FOREIGN KEY (`ID_equipa`) REFERENCES `equipas` (`ID_Equipa`);
 

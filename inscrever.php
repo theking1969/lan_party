@@ -42,10 +42,6 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtNome" placeholder="Nome" required name="nome">
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                     <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                    <select class="select" name="turma">
-                        <option>Selecione uma Turma</option>
-                        
-                    </select>
                     <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                     <div class="checkbox">
                         <input type="checkbox" id="check" name="Equipa">
@@ -108,7 +104,6 @@ function inscrever(){
 if(isset($_POST['botao'])) {
     inscrever();
 }
-
 
 if (isset($_POST['Equipa'])){
 
