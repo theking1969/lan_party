@@ -101,7 +101,7 @@ function inscrever(){
 }
 
 function verificationEmail(){
-  const APP_URL = 'http://localhost/auth'; //por resolver
+  //const APP_URL = 'http://localhost/auth'; //por resolver
     // create the activation link
     $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
 
