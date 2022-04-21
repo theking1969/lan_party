@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -14,7 +14,6 @@ body{
     background: rgb(32,22,83);
     background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
     background-attachment: fixed;
-    min-height: auto;
 }
 header{
     display:flex;
@@ -24,7 +23,6 @@ header{
     background-color: rgba(43, 43, 43, 0.781);
 }
  .cabecalho-menu{
-
     display: flex;  
     gap: 30px;
     font-family: 'Righteous', cursive;
@@ -38,9 +36,6 @@ form{
     height: 450px;
     margin-top:20%;
     border-radius: 30px;
-    background-color:rgba(86, 45, 97, 0.876);
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -135,14 +130,13 @@ input{
 .select{
     width: 55%;
 }
-
 footer{
-    margin-top: auto;
-    position: fixed;
+    position:absolute;
+    margin-top: 2em;
     left: 0;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #dadada;
+ 
 }
 .titulo-footer{
     display: flex;
@@ -172,6 +166,18 @@ footer{
     align-items: center;
     justify-content: space-around;
 }
+
+div.jogador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+div.jogador input{
+    margin-top: .5rem;
+}
+
 @media only screen and (max-width: 59.375rem) {
 
     .formulario-fundo{           
@@ -208,23 +214,36 @@ footer{
         height: 35px;   
     }
 }
-@media only screen and (max-width: 950px) {
-
-    .formulario-fundo-esquerda{
+@media only screen and (max-width: 800px) {
+    .cabecalho-menu {
+        justify-content: center;
+        flex-direction: column;
+    }
+    #img{
+        width: 10%;
+    }
+    .div-img {
         display: none;
     }
-   
-    .formulario-fundo{           
-      margin-left: 2rem;
+    .form-escrever{
+        width: 300px;
+    }
+    footer{
+        display: none;
     }
 }
-@media only screen and (max-width: 1200px){
-    footer{
-        margin-top: auto;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        border-top: 1px solid #dadada;
+@media only screen and (max-width: 1200px) {
+    .div-img {
+        display: none;
     }
+    .form-escrever{
+        width: 400px;
+    } 
+}
+@media only screen and (max-width: 600px) {
+   
+    .form-escrever{
+        width: 280px;
+    }
+   
 }

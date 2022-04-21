@@ -82,7 +82,7 @@ main{
 }
 footer{
     margin-top: auto;
-    border-top: 1px solid #dadada;
+   
 }
 .titulo-footer{
     display: flex;
@@ -103,7 +103,7 @@ footer{
 }
 .footer-nav-item{
     font-family: 'Righteous', cursive;
-    color: white;
+   
 }
 .sec-img{
     margin-bottom: 2px;

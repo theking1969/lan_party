@@ -22,7 +22,7 @@ session_start();
                 <a href="index.php" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
-                <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
+                
             
             </nav>
         </header>

@@ -26,7 +26,6 @@ if (isset( $_POST ['submit3'])) {
                 <a href="index.php" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
-                <a href="sair.php" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
 
             </nav>
         </header>
@@ -43,33 +42,16 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                     <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                     <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
-                    <div class="checkbox">
-                        <input type="checkbox" id="check" name="Equipa">
-                        <h3 class="teste">Tenho uma Equipa</h3>
-                    </div>
-                    <button class="botao" name="botao" style="margin-bottom: 3%;">Inscrever</button>
+
                 </form>
             </div>
 
             <div class="div-img" style="margin-top: 2%;width:642px;height:448px;">
-
                     <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
-
             </div>
         </section>
     </main>
-    <footer>
-    <section class="rodape-conteudo">
-        <h2 style="padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;">Patrocinadores</h2>
-        <section class="sec-img" style="padding-bottom: 2px;">
-            <img src="images/is.logo.wide.png" alt="">
-            <img src="images\5296499_fb_facebook_facebook logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296515_bird_tweet_twitter_twitter logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296504_forum_reddit_reddit logo_icon.svg" alt="" width="4%" height="8%">
-        </section>
-    </section>
-</footer>
-    <br>
+
 </body>
 </html>
 
@@ -101,12 +83,6 @@ function inscrever(){
 }
 
 function verificationEmail(){
-$from = $_POST['email'];
-$header = "From:lanpartypsi5@gmail.com \r\n";
-         $header .= "Cc: $from \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-mail($_POST['email'] , 'Mail Subject', 'Mail test content', $header);
 
 
 }
