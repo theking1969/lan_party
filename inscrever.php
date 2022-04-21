@@ -37,7 +37,7 @@ if (isset( $_POST ['submit3'])) {
     <main>
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <form action="inscrever.php" class="form-escrever" style="height: 20%;">
+                <form action="inscrever.php" class="form-escrever" method="post" style="height: 20%;">
                     <h2 class="form-titulo">Inscrição</h2>
                     <input type="text" class="txtNome" placeholder="Nome" required name="nome">
                     <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
@@ -47,7 +47,7 @@ if (isset( $_POST ['submit3'])) {
                         <input type="checkbox" id="check" name="Equipa">
                         <h3 class="teste">Tenho uma Equipa</h3>
                     </div>
-                    <button class="botao" style="margin-bottom: 3%;">Inscrever</button>
+                    <button class="botao" name="botao" style="margin-bottom: 3%;">Inscrever</button>
                 </form>
             </div>
 
@@ -101,21 +101,13 @@ function inscrever(){
 }
 
 function verificationEmail(){
-  //const APP_URL = 'http://localhost/auth'; //por resolver
-    // create the activation link
-    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
+$from = $_POST['email'];
+$header = "From:lanpartypsi5@gmail.com \r\n";
+         $header .= "Cc: $from \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
+mail($_POST['email'] , 'Mail Subject', 'Mail test content', $header);
 
-    // set email subject & body
-    $subject = 'Confirme a sua conta';
-    $message = <<<MESSAGE
-            Ative a sua conta aqui ->
-            $activation_link
-            MESSAGE;
-    // email header
-    $header = "From:" . $_POST['email'];
-
-    // send the email
-    mail($_POST['email'], $subject, nl2br($message), $header);
 
 }
 
