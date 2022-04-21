@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include 'config.php';
 if (isset( $_POST ['submit2'])) {
     header("Location: exercicio2.php");
 }
@@ -56,53 +56,61 @@ if (isset( $_POST ['submit3'])) {
 </html>
 
 <?php
-function inscrever(){
-    if (isset($_POST['nome'])){
-        if (isset($_POST['numaluno'])){
-            if(isset($_POST['email'])){
-                if (isset($_POST['idsteam'])){
-                    $dbHost= 'Localhost';
-                    $dbUsername= 'root';
-                    $Password= '';
-                    $dbName= 'bdlan_party';
-                    $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
+//function verificationEmail(){
+//// const APP_URL = 'http://localhost/auth'; //por resolver
+//    // create the activation link
+//    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
+//
+//    // set email subject & body
+//    $subject = 'Confirme a sua conta';
+//    $message = <<<MESSAGE
+//            Ative a sua conta aqui ->
+//            $activation_link
+//            MESSAGE;
+//    // email header
+//    $header = "From:" . $_POST['email'];
+//
+//    // send the email
+//    mail($_POST['email'], $subject, nl2br($message), $header);
+//
+//}
 
-                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ',)';
+function inserirjogadores(){
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "lan_party";
 
-                    if (mysqli_query($conn, $sql)) {
-                        echo "Inscrito com sucesso!";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
+    $conn = new mysql($servername, $username, $password, $dbname);
+    $nome = $_POST['txtNome'];
+    $numeroAluno = $_POST['txtNumeroAluno'];
+    $email = $_POST['txtEmail'];
+    $steamID = $_POST['txtSteam'];
+    $equipa = $_POST['txtEquipa'];
 
-                    mysqli_close($conn);
-                }
-            }
-        }
+    $sqlSelect = "SELECT ID_Equipa FORM Equipas WHERE Nome_Equipa = $equipa";
+    $getRes = $conn->prepare($sqlSelect);
+    $getRes->execute();
+
+    while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
+        $equipaID = $row['ID_Equipa'];
     }
-}
 
-function verificationEmail(){
-// const APP_URL = 'http://localhost/auth'; //por resolver 
-    // create the activation link
-    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
 
-    // set email subject & body
-    $subject = 'Confirme a sua conta';
-    $message = <<<MESSAGE
-            Ative a sua conta aqui ->
-            $activation_link
-            MESSAGE;
-    // email header
-    $header = "From:" . $_POST['email'];
+    $sql = "INSERT INTO jogadores (Nome_jogadores, NumEsco, Email, Steam_ID, ID_Equipa) VALUES ($nome, $numeroAluno, $email, $steamID, $equipaID)";
 
-    // send the email
-    mail($_POST['email'], $subject, nl2br($message), $header);
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
+    $conn->close();
 }
 
 if(isset($_POST['botao'])) {
-    verificationEmail();
+    //verificationEmail();
+
 }
 
 if (isset($_POST['Equipa'])){
