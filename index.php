@@ -20,23 +20,27 @@ session_start();
                 <a href="" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
-                <a href="" class="cabecalho-menu-item" name="select" value="select" >Sair</a>
             </nav>
         </header>
     <main>
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Bem-vindo jogador</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reunir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
-                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás à espera do que ?<br/><br/>Inscreve-te!</h2>
+                <h2 class="conteudo-principal-escrito-subtitulo">    A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reunir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
+                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás à espera do que ? <b>Inscreve-te! <b></h2>
                 <div class="conteudo-principal-escrito-butao">
                         <form action="index.php" method="post">
-                            <button name="butaoInscrever" class="butao" value="inscrever">Quero me inscrever!</button>
+                            <button name="butaoInscreverIndividual" class="butao" value="inscrever">Inscrição Individual</button>
+                            <br><br>
+                              <button name="butaoInscreverEquipa" class="butao" value="inscrever">Inscrever como equipa!</button>
+                          
                         </form>
+                      
+            
                 </div>
             </div>
 
-            <div style="margin-top: 2%;width:642px;height:448px;">
+            <div style="width:642px;height:500px;">
                 <div>
                     <div>
                     <img src="images/Online games addiction-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
@@ -45,20 +49,44 @@ session_start();
             </div>
         </section> 
     </main>
-        <footer>         
-              
+    <footer>         
+    
+            <section class="rodape-conteudo">
+                            
+                    <section class="sec-img">
+                       
+                         <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
+                         <br>
+                    </section>                        
+            </section>         
         </footer>
+        <br><br>
     </body>
     </html>
 
 <?php
-function inscrever(){
-    header("Location: inscrever.php");
+$inscrever="";
+
+
+if(isset($_POST['butaoInscreverIndividual']))
+{
+    $inscrever = "individual";
+    inscrever($inscrever);
+}else if(isset($_POST['butaoInscreverEquipa'])){
+    $inscrever = "equipa";
+    inscrever($inscrever);
 }
 
+function inscrever($inscrever){
 
-if(isset($_POST['butaoInscrever']))
-{
-    inscrever();
+    switch($inscrever){
+        case "individual":
+            header("Location: inscrever.php");
+            break;
+        case "equipa":
+            header("Location: inscreverequipa.php");
+            break;
+    }
+    
 }
 ?>
