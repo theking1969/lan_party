@@ -16,7 +16,7 @@ if (isset( $_POST ['submit3'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
-    <title>inscrever</title>
+    <title>Inscrever</title>
 </head>
 
 <body>
@@ -31,12 +31,13 @@ if (isset( $_POST ['submit3'])) {
         </header>
     <section id="sec-titulo">
         <div class="break"></div>
-        <h1 id="titulo">Inscreve-te!</h1>
+        <h1 id="titulo">Inscreve a tua equipa!</h1>
     </section>
     <main>
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <form action="inscrever.php" class="form-escrever" style="height: 20%;">
+                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa: </h2><input type="text" class="txtNome" placeholder="Nome da equipa"></div>
                     <div class="jogadoresInscricao">
                         <h2 class="form-titulo">Inscrição Jogador Um</h2>
                         <div class="jogador">
