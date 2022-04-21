@@ -37,7 +37,7 @@ if (isset( $_POST ['submit3'])) {
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <form action="inscrever.php" class="form-escrever" style="height: 20%;">
-                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa: </h2><input type="text" class="txtNome" placeholder="Nome da equipa"></div>
+                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa</h2><input type="text" class="txtNome" placeholder="Nome da equipa"></div>
                     <div class="jogadoresInscricao">
                         <h2 class="form-titulo">Inscrição Jogador Um</h2>
                         <div class="jogador">
