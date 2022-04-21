@@ -27,7 +27,24 @@ session_start();
             </nav>
         </header>
     <main>
-        <h1>Sobre este projeto.</h1>
+        <div class="conteudo-principal-escrito">
+
+        <div style="margin-top: 2%;width:642px;height:448px;">
+                <div>
+                    <div>
+                    <img src="images/csgo.png" class="d-block w-100" alt="..."style="height: 385px;width: 309px;">
+                    </div>
+                </div>
+            </div>
+        <h1 style="text-align: center;"class="conteudo-principal-escrito-titulo">Sobre este projeto.</h1>
+     <h2 class="conteudo-principal-escrito-subtitulo">Este projeto irá decorrer no dia 5 de maio ás 9:30, na sala 1, com 14 PC's disponiveis para quem não conseguir trazer o seu própio setup. (Projeto formado pela PSI5, Torneio CS:GO)</h2>
+     <h1 style="text-align: center;" class="conteudo-principal-escrito-titulo">Regras</h1>
+     <h2 class="conteudo-principal-escrito-subtitulo">Não gritar durante os jogos. <br>Não utilizar línguagem ofensíva. <br>Não ofender Adversários. <br>Não estragar o material escolar. <br>Não ter conduta anti-gaming (Flame, Toxicidade, Intentional feed, Hacks/Cheats) </h2>
+     <h1 style="text-align: center;" class="conteudo-principal-escrito-titulo">Funcionamento do torneio</h1>
+     <h2 class="conteudo-principal-escrito-subtitulo">Os participantes podem inscrever-se na aba <a href="index.php">"Inscrições"</a> e inscreverer uma equipa (5 Participantes), ou simplesmente 1 participante poderá participar, mas será-lhe atribuida uma equipa de outros participantes sem equipa, caso não haja participantes suficientes sem equipa o participante não poderá jogar no torneio. <br> Podem trazer os vossos periféricos (Rato e teclado). <br><br> <strong style="text-align: center;">TODOS OS PARTICIPANTES DA EQUIPA QUE FICAR EM 1º LUGAR VÃO TER UM PRÉMIO!</strong> </h2>
+
+
+        </div>
     </main>
         <footer>         
             <section class="rodape-conteudo">
