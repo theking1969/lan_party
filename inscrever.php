@@ -43,6 +43,7 @@ if (isset( $_POST ['submit3'])) {
                     <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                     <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
 
+                    <button class="botao" style="margin-bottom: 3%;">Inscrever</button>
                 </form>
             </div>
 
@@ -83,7 +84,6 @@ function inscrever(){
 }
 
 function verificationEmail(){
-
 
 }
 
