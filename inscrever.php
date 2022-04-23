@@ -76,7 +76,7 @@ function inserirjogadores(){
     // while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
     //     $equipaID = $row['ID_Equipa'];
     // }
-    
+
 if ($_POST['equipa'] == "Equipa 1") {
   $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
 }
