@@ -36,7 +36,7 @@ session_start();
                 <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                 <<<<<<< HEAD
-                <select name="equipa" id="equipasCombo">
+                <select name="equipa" id="equipasCombo" name="equipasCombo">
                     <option value="">Escolha a equipa</option>
                     <option value="1">Equipa 1</option>
                     <option value="2">Equipa 2</option>
@@ -87,11 +87,11 @@ function inserirjogadores(){
     $dbname = "bdlanparty";
 
     $conn = new mysql($servername, $username, $password, $dbname);
-    $nome = $_POST['txtNome'];
-    $numeroAluno = $_POST['txtNumeroAluno'];
-    $email = $_POST['txtEmail'];
-    $steamID = $_POST['txtSteam'];
-    $equipa = $_POST['txtEquipa'];
+    $nome = $_POST['nome'];
+    $numeroAluno = $_POST['numaluno'];
+    $email = $_POST['email'];
+    $steamID = $_POST['idsteam'];
+    $equipa = $_POST['equipasCombo'];
 
     $sqlSelect = "SELECT ID_Equipa FORM Equipas WHERE Nome_Equipa = $equipa";
     $getRes = $conn->prepare($sqlSelect);
