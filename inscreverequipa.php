@@ -111,7 +111,7 @@ function inscrever(){
     }
 }
 
-function verificationEmail(){
+/* function verificationEmail(){
 // const APP_URL = 'http://localhost/auth'; //por resolver 
     // create the activation link
     $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
@@ -128,7 +128,7 @@ function verificationEmail(){
     // send the email
     mail($_POST['email'], $subject, nl2br($message), $header);
 
-}
+} */
 
 if(isset($_POST['botao'])) {
     verificationEmail();

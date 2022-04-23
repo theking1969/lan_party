@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bdlan_party`
+-- Banco de dados: `bd_lanparty`
 --
 
 -- --------------------------------------------------------
@@ -148,8 +148,8 @@ CREATE TABLE `jogadores` (
   `id_jogadores` int(11) NOT NULL,
   `Nome_jogadores` text NOT NULL,
   `NumESCO` int(11) NOT NULL,
-  `Email` text NOT NULL,
-  `Steam_ID` text NOT NULL,
+  `Email` varchar(1000) NOT NULL,
+  `Steam_ID` varchar(10000) NOT NULL,
   `ID_equipa` int(11) NOT NULL,
   `ID_estadoJogador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -35,15 +35,15 @@ session_start();
                 <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                 <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
-                <select name="equipa" id="equipasCombo" name="equipasCombo">
-                    <option value="">Escolha a equipa</option>
-                    <option value="1">Equipa 1</option>
-                    <option value="2">Equipa 2</option>
-                    <option value="3">Equipa 3</option>
-                    <option value="4">Equipa 4</option>
-                    <option value="5">Equipa 5</option>
+                <select id="equipasCombo" name="equipasCombo">
+                    <option value="Escolha a equipa">Escolha a equipa</option>
+                    <option value="Equipa 1">Equipa 1</option>
+                    <option value="Equipa 2">Equipa 2</option>
+                    <option value="Equipa 3">Equipa 3</option>
+                    <option value="Equipa 4">Equipa 4</option>
+                    <option value="Equipa 5">Equipa 5</option>
                 </select>
-                <button class="botao" style="margin-bottom: 3%;">Inscrever</button>
+                <button class="botao" style="margin-bottom: 3%;" name="botao">Inscrever</button>
             </form>
         </div>
 
@@ -80,58 +80,48 @@ function inserirjogadores(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bdlanparty";
+    $dbname = "bd_lanparty";
 
-    $conn = new mysql($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
     $nome = $_POST['nome'];
     $numeroAluno = $_POST['numaluno'];
     $email = $_POST['email'];
     $steamID = $_POST['idsteam'];
     $equipa = $_POST['equipasCombo'];
 
-    if ($_POST['equipa'] == "Escolha a equipa") {
+    if ($_POST['equipasCombo'] == "Escolha a equipa") {
         echo "É necessario inserir a equipa que quer entrar!";
       }
-      elseif ($_POST['equipaCombo'] == "Equipa 1") {
-        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
+      else if ($_POST['equipasCombo'] == "Equipa 1") {
+        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
         $getRes = $conn->prepare($sqlSelect);
         $getRes->execute();
       }
-      elseif ($_POST['equipaCombo'] == "Equipa 2") {
-        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 2)";
+      else if ($_POST['equipasCombo'] == "Equipa 2") {
+        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', $numeroAluno, '$email', $steamID, 2 , 2)";
+        $getRes = $conn->prepare($sqlSelect);
+        $getRes->execute();
+        echo 'teste';
+      }
+      else if ($_POST['equipasCombo'] == "Equipa 3") {
+        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 3)";
         $getRes = $conn->prepare($sqlSelect);
         $getRes->execute();
       }
-      elseif ($_POST['equipaCombo'] == "Equipa 3") {
-        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 3)";
+      else if ($_POST['equipasCombo'] == "Equipa 4") {
+        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 4)";
         $getRes = $conn->prepare($sqlSelect);
         $getRes->execute();
       }
-      elseif ($_POST['equipaCombo'] == "Equipa 4") {
-        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 4)";
+      else if ($_POST['equipasCombo'] == "Equipa 5") {
+        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 5)";
         $getRes = $conn->prepare($sqlSelect);
         $getRes->execute();
       }
-      elseif ($_POST['equipaCombo'] == "Equipa 5") {
-        $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa)". " VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 4)";
-        $getRes = $conn->prepare($sqlSelect);
-        $getRes->execute();
-      }
-
 $conn->close();
-}
-
-function verificationEmail(){
-
-    $conn->close();
 }
 
 if(isset($_POST['botao'])) {
     inserirjogadores();
-
-}
-
-if (isset($_POST['Equipa'])){
-
 }
 ?>
