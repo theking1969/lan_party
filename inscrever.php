@@ -35,7 +35,6 @@ session_start();
                 <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                 <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
-                <<<<<<< HEAD
                 <select name="equipa" id="equipasCombo" name="equipasCombo">
                     <option value="">Escolha a equipa</option>
                     <option value="1">Equipa 1</option>
@@ -44,9 +43,6 @@ session_start();
                     <option value="4">Equipa 4</option>
                     <option value="5">Equipa 5</option>
                 </select>
-                =======
-
-                >>>>>>> 54a779f049656aa7a6d78b705b0f1dd21043ddf5
                 <button class="botao" style="margin-bottom: 3%;">Inscrever</button>
             </form>
         </div>
@@ -93,13 +89,27 @@ function inserirjogadores(){
     $steamID = $_POST['idsteam'];
     $equipa = $_POST['equipasCombo'];
 
-    $sqlSelect = "SELECT ID_Equipa FORM Equipas WHERE Nome_Equipa = $equipa";
+    $sqlSelect = "SELECT ID_Equipa FROM Equipas WHERE Nome_Equipa = $equipa";
     $getRes = $conn->prepare($sqlSelect);
     $getRes->execute();
 
     while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
         $equipaID = $row['ID_Equipa'];
     }
+
+    $sql = "INSERT INTO jogadores (Nome_jogadores, NumEsco, Email, Steam_ID, ID_Equipa) VALUES ($nome, $numeroAluno, $email, $steamID, $equipaID)"; 
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+ $sqlselectTeste = "SELECT * FROM Equipas";
+ $getRes = $conn->prepare($sqlselectTeste);
+ $getRes->execute();
+ echo $getRes;
+
+$conn->close();
 }
 
 function verificationEmail(){
