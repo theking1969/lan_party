@@ -35,6 +35,7 @@ session_start();
                 <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
                 <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                <<<<<<< HEAD
                 <select name="equipa" id="equipasCombo">
                     <option value="">Escolha a equipa</option>
                     <option value="1">Equipa 1</option>
@@ -43,6 +44,9 @@ session_start();
                     <option value="4">Equipa 4</option>
                     <option value="5">Equipa 5</option>
                 </select>
+                =======
+
+                >>>>>>> 54a779f049656aa7a6d78b705b0f1dd21043ddf5
                 <button class="botao" style="margin-bottom: 3%;">Inscrever</button>
             </form>
         </div>
@@ -80,7 +84,7 @@ function inserirjogadores(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bd_lanparty";
+    $dbname = "bdlanparty";
 
     $conn = new mysql($servername, $username, $password, $dbname);
     $nome = $_POST['txtNome'];
@@ -100,7 +104,7 @@ function inserirjogadores(){
 
 function verificationEmail(){
 
-    //$conn->close();
+    $conn->close();
 }
 
 if(isset($_POST['botao'])) {
