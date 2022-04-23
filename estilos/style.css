@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background: rgb(32,22,83);
+    background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#label-login{
+    font-size: 62px;
+    display: flex;
+    justify-content: center;
+    color: rgba(31, 31, 31, 0.817);
+    margin-top: 5%;
+    font-family: 'Aclonica', sans-serif;
+}
+.sec-login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.formulario-fundo{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.863);
+    align-items: center;
+    width: 445px;
+    height: 450px;
+    gap: 35px;
+    margin-right: 2rem  ;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.formulario-fundo-esquerda{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(80, 80, 80, 0.863);
+    width: 445px;
+    height: 450px;
+    gap: 40px;
+}
+.img-form
+{
+    display: flex;
+    justify-content:center;
+    margin-top:2.5rem;
+}
+.formulario-box{
+    height: 37px;
+    width: 250px;
+    padding: 1em;
+    margin-bottom: 10px;
+    outline: 0;  
+    /* SERVE PARA TIRAR O SELECT DA BOX */
+    border-radius: 15px;
+    font-size: 1em;
+    border: 1px solid #939393e9;
+    font-family: 'Roboto', sans-serif;
+}
+.btnLinha{
+    display: flex;
+    gap: 10px;
+}
+.butao{   
+        
+    background-color: #f4960bcf;
+    width: 150px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cabin', sans-serif;
+    border-radius: 31px;
+    font-size: 19px; 
+    color: #ffffff;
+}
+.butao2{   
+    background-color: #00a2ff;
+    width: 150px;
+    height: 50px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cabin', sans-serif;
+    border-radius: 31px;
+    font-weight: 28px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.butao:hover{
+    background: #0370ff;
+}
+.butao2:hover{
+    background: #c7d8f0;
+}
+.secao{
+    display: flex;
+    flex-direction: column;
+}
+.secao2{
+    margin-top: 2%;    
+    display: flex;
+    flex-direction: column;
+}
+.formulario-label{
+    padding-bottom: 5px;
+    font-family: 'Righteous', cursive;
+}
+.error{
+    font-family: 'Righteous', cursive;
+    color: #FF0000;
+}
+.div-lembrar{
+    display: flex;
+    flex-direction: row;
+}
+@media only screen and (max-width: 950px) {
+
+    .formulario-fundo{           
+        width: 300px;
+        height: 400px;  
+        gap:20px
+    }
+    .formulario-fundo-esquerda{
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+        background-color: rgba(80, 80, 80, 0.863);
+        width: 300px;
+        height: 350px;
+        gap: 40px;
+    }
+    .img-form
+    {
+        display: flex;
+        justify-content:center;
+        margin-top:2.5rem;
+        width:250px;
+        height:150px;
+    }
+    
+    .butao{   
+        width: 115px;
+        height: 35px;   
+    }
+    .butao2{   
+        width: 115px;
+        height: 35px;   
+    }
+}
+@media only screen and (max-width: 950px) {
+
+    .formulario-fundo-esquerda{
+        display: none;
+    }
+   
+    .formulario-fundo{           
+      margin-left: 2rem;
+    }
+}

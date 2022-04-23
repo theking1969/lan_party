@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+html {
+    height: 100%;
+    min-height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-size: 100%;
+    background: rgb(32,22,83);
+    background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
+    background-attachment: fixed;
+    min-height: 100%;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    background-color: rgb(43, 43, 43);
+}
+ .cabecalho-menu{
+    display: flex;
+    gap: 30px;
+    font-family: 'Righteous', cursive;
+}
+.cabecalho-menu-item{
+    color: white;
+}
+#sec-titulo{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.break {
+    display: flex;
+    flex-basis: 100%;
+    height: 80px;
+  }
+#titulo{
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 30px;
+    line-height: 61px;
+}
+.sec-exercicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;  
+}
+#exercicio1{
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15%;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 66%, rgba(148,187,233,1) 100%);  
+    width: 300px;
+    height: 350px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+#exercicio2{
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17%;
+    background: rgb(34,193,195);
+    background: linear-gradient(45deg, rgba(34,193,195,1) 45%, rgba(253,187,45,1) 100%);  
+    width: 300px;
+    height: 350px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);  
+}
+#exercicio3{
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15%;
+    background: rgb(36,0,30);
+    background: linear-gradient(61deg, rgba(36,0,30,1) 1%, rgba(9,98,121,1) 23%, rgba(0,212,255,1) 100%);
+    width: 300px;
+    height: 350px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);  
+}
+.exercicio-titulo{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    color: black;
+    font-family: 'Cabin', sans-serif;
+}
+.conteudo-principal-escrito-subtitulo{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    max-width: 250px;
+    font-family: 'Josefin', sans-serif;
+    color: black;
+}
+
+.butao{   
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    width: 150px;
+    height: 62px;
+    left: 135px;
+    top: 527px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cabin', sans-serif;
+    border-radius: 31px;
+    font-size: 19px; 
+    font-weight: 28px;
+    font-size: 19px;
+    line-height: 23px;
+    color: #ffffff;
+}
+footer{
+    border-top: 1px solid #dadada;
+}
+.titulo-footer{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    
+}
+.rodape-conteudo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.footer-menu-nav{
+    display: flex;
+    gap: 150px;
+}
+.footer-nav-item{
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+.sec-img{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 820px) {
+    .sec-exercicios{
+       
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    #titulo{
+      
+        font-size: 23px;
+        line-height: 61px;
+        text-align: center;
+    }
+    #img{
+        width: 10%;
+    }
+}
