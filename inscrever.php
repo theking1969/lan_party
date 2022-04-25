@@ -81,7 +81,7 @@ function inserirjogadores(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bdlan_party";
+    $dbname = "bd_lanparty";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     $nome = $_POST['nome'];
