@@ -45,6 +45,13 @@ CREATE TABLE `equipas` (
   `Estado_equipa` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `equipas` (`ID_Equipa`, `Nome_Equipa`) VALUES
+(1, 'Equipa 1'),
+(2, 'Equipa 2'),
+(3, 'Equipa 3'),
+(4, 'Equipa 4'),
+(5, 'Equipa 5');
+
 -- --------------------------------------------------------
 
 --
