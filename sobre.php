@@ -24,7 +24,6 @@ if (isset( $_POST ['submit3'])) {
     <nav class="cabecalho-menu" >
     <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
     <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
     </nav>
 </header>
 <section id="sec-titulo">

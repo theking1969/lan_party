@@ -18,7 +18,6 @@ session_start();
             <nav class="cabecalho-menu" >
             <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
     <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
 
             </nav>
         </header>
@@ -165,11 +164,20 @@ function inscrever(){
 
 $equipa = $_POST['NomeEquipa'];
   //echo $equipa;
-  $sqlSelect = "SELECT ID_Equipa FROM equipas where Nome_Equipa = '$equipa'"; //output é sempre 1 ERRO
-   $getRes = $conn->prepare($sqlSelect);
-  $equipaID = $getRes->execute();
+  $sql = "SELECT ID_Equipa FROM equipas where Nome_Equipa = '$equipa'"; //output é sempre 1 ERRO
+  // $getRes = $conn->prepare($sqlSelect);
+  //$equipaID = $getRes->execute();
+  $result = $conn->query($sql);
 
-  //echo $equipaID;
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    $equipaID = $row["ID_Equipa"];
+    echo "id: " . $row["ID_Equipa"];
+  }
+} else {
+  echo "0 results";
+}
 
   insertplayers($equipaID);
 }

@@ -19,7 +19,6 @@ session_start();
     <nav class="cabecalho-menu" >
     <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
     <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
 
     </nav>
 </header>
@@ -116,61 +115,52 @@ if ($_POST['equipa'] == "Escolha a equipa") {
   echo "É necessario inserir a equipa que quer entrar!";
 }
 elseif ($_POST['equipa'] == "Equipa 1") {
-  $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 1";
-  $getRes = $conn->prepare($sqlSelect);
-  $i = $getRes->execute();
-  echo $i;
-  if (5 > $i) {
-    insert(1);
-  }
-  else {
-    echo '<script>alert("A Equipa 1 já está cheia!")</script>';
-  }
+  $sql = "SELECT * FROM `jogadores` WHERE ID_equipa = 1";
+  $result = $conn->query($sql);
+  if ($result->num_rows < 5) {
+  insert(1);
+} else {
+  echo '<script>alert("A Equipa 1 já está cheia!")</script>';
+}
+  //$getRes = $conn->prepare($sqlSelect);
+  //$i = $getRes->execute();
 }
 elseif ($_POST['equipa'] == "Equipa 2") {
-  $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 2";
-  $getRes = $conn->prepare($sqlSelect);
-  $i = $getRes->execute();
-  if (5 > $i) {
-    insert(2);
-  }
-  else {
-    echo '<script>alert("A Equipa 2 já está cheia!")</script>';
-  }
+  $sql = "SELECT * FROM `jogadores` WHERE ID_equipa = 2";
+  $result = $conn->query($sql);
+  if ($result->num_rows < 5) {
+  insert(2);
+} else {
+  echo '<script>alert("A Equipa 2 já está cheia!")</script>';
+}
 
 }
 elseif ($_POST['equipa'] == "Equipa 3") {
-  $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 3";
-  $getRes = $conn->prepare($sqlSelect);
-  $i = $getRes->execute();
-  if (5 > $i) {
-    insert(3);
-  }
-  else {
-    echo '<script>alert("A Equipa 3 já está cheia!")</script>';
-  }
+  $sql = "SELECT * FROM `jogadores` WHERE ID_equipa = 3";
+  $result = $conn->query($sql);
+  if ($result->num_rows < 5) {
+  insert(3);
+} else {
+  echo '<script>alert("A Equipa 3 já está cheia!")</script>';
+}
 }
 elseif ($_POST['equipa'] == "Equipa 4") {
-  $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 4";
-  $getRes = $conn->prepare($sqlSelect);
-  $i = $getRes->execute();
-  if (5 > $i) {
-    insert(4);
-  }
-  else {
-    echo '<script>alert("A Equipa 4 já está cheia!")</script>';
-  }
+  $sql = "SELECT * FROM `jogadores` WHERE ID_equipa = 4";
+  $result = $conn->query($sql);
+  if ($result->num_rows < 5) {
+  insert(4);
+} else {
+  echo '<script>alert("A Equipa 4 já está cheia!")</script>';
+}
 }
 elseif ($_POST['equipa'] == "Equipa 5") {
-  $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 5";
-  $getRes = $conn->prepare($sqlSelect);
-  $i = $getRes->execute();
-  if (5 > $i) {
-    insert(5);
-  }
-  else {
-    echo '<script>alert("A Equipa 5 já está cheia!")</script>';
-  }
+  $sql = "SELECT * FROM `jogadores` WHERE ID_equipa = 5";
+  $result = $conn->query($sql);
+  if ($result->num_rows < 5) {
+  insert(5);
+} else {
+  echo '<script>alert("A Equipa 5 já está cheia!")</script>';
+}
 }
 
 }
