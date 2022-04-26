@@ -16,16 +16,16 @@ if (isset( $_POST ['submit3'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
-    <title>Inscrever</title>
+    <title>Inscrições - Equipas</title>
 </head>
 
 <body>
         <header class="cabecalho">
             <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
             <nav class="cabecalho-menu" >
-                <a href="index.php" class="cabecalho-menu-item">Início</a>
-                <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-                <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
+            <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
+    <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
+    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
 
             </nav>
         </header>
@@ -81,7 +81,6 @@ if (isset( $_POST ['submit3'])) {
             </div>
         </section>
     </main>
-    <br><br>
 </body>
 </html>
 
@@ -95,6 +94,7 @@ function inscrever(){
     $dbname = "bd_lanparty";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
+
     $nome = $_POST['nome'];
     $numeroAluno = $_POST['numaluno'];
     $email = $_POST['email'];
@@ -111,39 +111,27 @@ function inscrever(){
     while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
         $equipaID = $row['ID_Equipa'];
     }
-    while($inscricoes == false){
-  $cont = 1;
-  if($cont == 1){
+
     $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome1', '$numeroAluno1', '$email1', '$steamID1', 1 , '$equipaID')";
     $getRes = $conn->prepare($sql);
     $getRes->execute();
-    $cont++;
-  }
-  else if($cont == 2){
+
     $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome2', '$numeroAluno2', '$email2', '$steamID2', 1 , '$equipaID')";
     $getRes = $conn->prepare($sql);
     $getRes->execute();
-    $cont++;
-  }
-  else if($cont == 3){
+
     $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome3', '$numeroAluno3', '$email3', '$steamID3', 1 , '$equipaID')";
     $getRes = $conn->prepare($sql);
     $getRes->execute();
-    $cont++;
-  }
-  else if($cont == 4){
+
     $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome4', '$numeroAluno4', '$email4', '$steamID4', 1 , '$equipaID')";
     $getRes = $conn->prepare($sql);
     $getRes->execute();
-    $cont++;
-  }
-  else if($cont == 5){
+
     $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome5', '$numeroAluno5', '$email5', '$steamID5', 1 , '$equipaID')";
     $getRes = $conn->prepare($sql);
     $getRes->execute();
-    $cont++;
-    $inscricoes = true;
-  }
+
   }
 }
 

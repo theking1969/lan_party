@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 html {
     height: 100%;
     min-height: 100%;
@@ -9,6 +11,9 @@ html {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     font-size: 100%;

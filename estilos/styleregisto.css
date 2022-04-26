@@ -15,6 +15,9 @@ body{
     background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
     background-attachment: fixed;
 }
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 header{
     display:flex;
     align-items: center;
@@ -49,7 +52,7 @@ form{
     font-size: 2em; 
 }
 input{
-    height: 37px;
+    height: 45px;
     width: 250px;
     border-radius: 15px 15px 15px 15px;
     padding: 1em;
@@ -132,7 +135,7 @@ input{
     height: 100%;
 }
 #equipasCombo {
-    height: 40px;
+    height: 45px;
     width: 250px;
     border-radius: 15px 15px 15px 15px;
     padding: 1em;

@@ -16,8 +16,9 @@ session_start();
     <body>
         <header class="cabecalho">
             <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
+
             <nav class="cabecalho-menu" >
-                <a href="" class="cabecalho-menu-item">Início</a>
+                <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
             </nav>
@@ -49,6 +50,7 @@ session_start();
             </div>
         </section>
     </main>
+<<<<<<< HEAD
     <footer>
 
             <section class="rodape-conteudo">
@@ -61,6 +63,9 @@ session_start();
             </section>
         </footer>
         <br><br>
+=======
+    
+>>>>>>> bec8dee32b952e1766755439b7bc2f23aa230ebe
     </body>
     </html>
 
