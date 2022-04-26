@@ -36,12 +36,8 @@ session_start();
                 <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                 <select name="equipa" id="equipasCombo">
-                    <option value="Escolha a equipa">Escolha a equipa</option>
-                    <option value="Equipa 1">Equipa 1</option>
-                    <option value="Equipa 2">Equipa 2</option>
-                    <option value="Equipa 3">Equipa 3</option>
-                    <option value="Equipa 4">Equipa 4</option>
-                    <option value="Equipa 5">Equipa 5</option>
+                    <option selected disabled value="Escolha a equipa">Escolha a equipa</option>
+
                 </select>
 
                 <button class="botao" style="margin-bottom: 3%;" name="botao">Inscrever</button>
@@ -76,6 +72,24 @@ session_start();
 //    mail($_POST['email'], $subject, nl2br($message), $header);
 //
 //}
+function verificarEquipa(){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "bdlan_party";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    $nome = $_POST['nome'];
+    $numeroAluno = $_POST['numaluno'];
+    $email = $_POST['email'];
+    $steamID = $_POST['idsteam'];
+
+   // $sqlSelCou = "select * from equipas inner join jogadores ON equipas.ID_Equipa = jogadores.ID_equipa HAVING count(*)<5;";
+   // $getRes = $conn->prepare($sqlSelCou);
+    //$getRes->execute();
+}
+
+
 
 function inserirjogadores(){
     $servername = "localhost";
@@ -89,17 +103,8 @@ function inserirjogadores(){
     $email = $_POST['email'];
     $steamID = $_POST['idsteam'];
 
-    // $sqlSelect = "SELECT ID_Equipa FORM Equipas WHERE Nome_Equipa = $equipa";
-    // $getRes = $conn->prepare($sqlSelect);
-    // $getRes->execute();
-    //
-    // while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
-    //     $equipaID = $row['ID_Equipa'];
-    // }
-    if ($_POST['equipa'] == "Escolha a equipa") {
-        echo "É necessario inserir a equipa que quer entrar!";
-    }
-    else if ($_POST['equipa'] == "Equipa 1") {
+
+    if ($_POST['equipa'] == "Equipa 1") {
         $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
         $getRes = $conn->prepare($sql);
         $getRes->execute();
