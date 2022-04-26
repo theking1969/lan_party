@@ -88,39 +88,31 @@ function inserirjogadores(){
     $numeroAluno = $_POST['numaluno'];
     $email = $_POST['email'];
     $steamID = $_POST['idsteam'];
-
-    // $sqlSelect = "SELECT ID_Equipa FORM Equipas WHERE Nome_Equipa = $equipa";
-    // $getRes = $conn->prepare($sqlSelect);
-    // $getRes->execute();
-    //
-    // while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
-    //     $equipaID = $row['ID_Equipa'];
-    // }
 if ($_POST['equipa'] == "Escolha a equipa") {
   echo "É necessario inserir a equipa que quer entrar!";
 }
 elseif ($_POST['equipa'] == "Equipa 1") {
-  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES($nome, $numeroAluno, $email, $steamID, 2 , 1)";
+  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
   $getRes = $conn->prepare($sqlSelect);
   $getRes->execute();
 }
 elseif ($_POST['equipa'] == "Equipa 2") {
-  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES($nome, $numeroAluno, $email, $steamID, 2 , 2)";
+$sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 2)";
   $getRes = $conn->prepare($sqlSelect);
   $getRes->execute();
 }
 elseif ($_POST['equipa'] == "Equipa 3") {
-  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES($nome, $numeroAluno, $email, $steamID, 2 , 3)";
+$sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 3";
   $getRes = $conn->prepare($sqlSelect);
   $getRes->execute();
 }
 elseif ($_POST['equipa'] == "Equipa 4") {
-  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES($nome, $numeroAluno, $email, $steamID, 2 , 4)";
+$sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 4)";
   $getRes = $conn->prepare($sqlSelect);
   $getRes->execute();
 }
 elseif ($_POST['equipa'] == "Equipa 5") {
-  $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES($nome, $numeroAluno, $email, $steamID, 2 , 5)";
+$sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 5)";
   $getRes = $conn->prepare($sqlSelect);
   $getRes->execute();
 }
