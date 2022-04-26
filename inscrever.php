@@ -62,8 +62,7 @@ session_start();
             <br>
         </section>
     </section>
-</footer>
-</html>
+</footer></html>
 
 <?php
 //function verificationEmail(){
