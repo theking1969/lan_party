@@ -12,6 +12,9 @@ html {
     box-sizing: border-box;
     text-decoration: none;
 }
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
     font-size: 100%;
     background: rgb(32,22,83);

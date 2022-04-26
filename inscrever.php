@@ -9,7 +9,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
-    <title>inscrever</title>
+    <title>Inscrições - Individuais</title>
+  
 </head>
 
 <body>
@@ -50,11 +51,8 @@ session_start();
     </section>
     
 <footer>         
-    
-    <section class="rodape-conteudo">
-                    
+    <section class="rodape-conteudo">  
             <section class="sec-img">
-               
                  <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
                  <br>
             </section>                        

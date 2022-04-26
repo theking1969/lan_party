@@ -16,7 +16,7 @@ if (isset( $_POST ['submit3'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
-    <title>Inscrever</title>
+    <title>Inscrições - Equipas</title>
 </head>
 
 <body>

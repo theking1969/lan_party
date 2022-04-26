@@ -16,7 +16,7 @@ if (isset( $_POST ['submit3'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleIncial.css">
     <link rel="icon" href="images/Closed_Book_Icon.svg.png">
-    <title>About</title>
+    <title>Sobre o Projeto</title>
 </head>
 
 <header class="cabecalho">
