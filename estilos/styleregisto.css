@@ -129,6 +129,19 @@ input{
 
 .select{
     width: 100%;
+    height: 100%;
+}
+#equipasCombo {
+    height: 40px;
+    width: 250px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1em;
+    outline: 0;
+    border: none;
+}
+
+#equipasCombo{
+
 }
 footer{
     position:absolute;
