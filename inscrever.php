@@ -68,6 +68,23 @@ session_start();
 </html>
 
 <?php
+function insert($equipa){
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "bd_lanparty";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  $nome = $_POST['nome'];
+  $numeroAluno = $_POST['numaluno'];
+  $email = $_POST['email'];
+  $steamID = $_POST['idsteam'];
+
+  $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , $equipa)";
+  $getRes = $conn->prepare($sql);
+  $getRes->execute();
+}
+
 function verificarEquipa(){
     $servername = "localhost";
     $username = "root";
@@ -79,10 +96,6 @@ function verificarEquipa(){
     $numeroAluno = $_POST['numaluno'];
     $email = $_POST['email'];
     $steamID = $_POST['idsteam'];
-
-   // $sqlSelCou = "select * from equipas inner join jogadores ON equipas.ID_Equipa = jogadores.ID_equipa HAVING count(*)<5;";
-   // $getRes = $conn->prepare($sqlSelCou);
-    //$getRes->execute();
 }
 
 
@@ -105,62 +118,58 @@ if ($_POST['equipa'] == "Escolha a equipa") {
 elseif ($_POST['equipa'] == "Equipa 1") {
   $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 1";
   $getRes = $conn->prepare($sqlSelect);
-  if (5 == $getRes->execute();) {
-    $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 1)";
-    $getRes = $conn->prepare($sqlSelect);
-    $getRes->execute();
+  $i = $getRes->execute();
+  echo $i;
+  if (5 > $i) {
+    insert(1);
   }
   else {
-    echo "A Equipa 1 já está cheia!";
+    echo '<script>alert("A Equipa 1 já está cheia!")</script>';
   }
 }
 elseif ($_POST['equipa'] == "Equipa 2") {
   $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 2";
   $getRes = $conn->prepare($sqlSelect);
-  if (5 == $getRes->execute();) {
-    $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 2)";
-    $getRes = $conn->prepare($sqlSelect);
-    $getRes->execute();
+  $i = $getRes->execute();
+  if (5 > $i) {
+    insert(2);
   }
   else {
-    echo "A Equipa 2 já está cheia!";
+    echo '<script>alert("A Equipa 2 já está cheia!")</script>';
   }
 
 }
 elseif ($_POST['equipa'] == "Equipa 3") {
   $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 3";
   $getRes = $conn->prepare($sqlSelect);
-  if (5 == $getRes->execute();) {
-    $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 3)";
-    $getRes = $conn->prepare($sqlSelect);
-    $getRes->execute();
+  $i = $getRes->execute();
+  if (5 > $i) {
+    insert(3);
   }
   else {
-    echo "A Equipa 3 já está cheia!";
+    echo '<script>alert("A Equipa 3 já está cheia!")</script>';
   }
 }
 elseif ($_POST['equipa'] == "Equipa 4") {
   $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 4";
   $getRes = $conn->prepare($sqlSelect);
-  if (5 == $getRes->execute();) {
-    $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 4)";
-    $getRes = $conn->prepare($sqlSelect);
-    $getRes->execute();
+  $i = $getRes->execute();
+  if (5 > $i) {
+    insert(4);
   }
   else {
-    echo "A Equipa 4 já está cheia!";
+    echo '<script>alert("A Equipa 4 já está cheia!")</script>';
   }
 }
 elseif ($_POST['equipa'] == "Equipa 5") {
   $sqlSelect = "SELECT COUNT(*) FROM `jogadores` WHERE ID_equipa = 5";
   $getRes = $conn->prepare($sqlSelect);
-  if (5 == $getRes->execute();) {
-    $sqlSelect = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , 5)";
-    $getRes = $conn->prepare($sqlSelect);
-    $getRes->execute();
+  $i = $getRes->execute();
+  if (5 > $i) {
+    insert(5);
   }
   else {
-    echo "A Equipa 5 já está cheia!";
+    echo '<script>alert("A Equipa 5 já está cheia!")</script>';
   }
 }
 
