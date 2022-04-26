@@ -80,17 +80,7 @@ $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
             </form>
     </section>
 </main>
-<footer>
-    <section class="rodape-conteudo">
-        <h2 style="padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;">Redes Sociais</h2>
-        <section class="sec-img" style="padding-bottom: 2px;">
-            <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296499_fb_facebook_facebook logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296515_bird_tweet_twitter_twitter logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296504_forum_reddit_reddit logo_icon.svg" alt="" width="4%" height="8%">
-        </section>
-    </section>
-</footer>
+
 </body>
 </html>
 

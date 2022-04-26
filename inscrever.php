@@ -49,15 +49,7 @@ session_start();
             <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
         </div>
     </section>
-    
-<footer>         
-    <section class="rodape-conteudo">  
-            <section class="sec-img">
-                 <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
-                 <br>
-            </section>                        
-    </section>         
-</footer>
+  
 <br><br>
 </main>
 
