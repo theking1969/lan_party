@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
     <title>Inscrições - Individuais</title>
-  
+
 </head>
 
 <body>
@@ -47,7 +47,7 @@ session_start();
             <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
         </div>
     </section>
-  
+
 <br><br>
 </main>
 
@@ -78,7 +78,7 @@ function inserirjogadores(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bdlan_party";
+    $dbname = "bd_lanparty";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     $nome = $_POST['nome'];

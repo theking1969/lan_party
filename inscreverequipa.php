@@ -1,12 +1,5 @@
 <?php
 session_start();
-
-if (isset( $_POST ['submit2'])) {
-    header("Location: exercicio2.php");
-}
-if (isset( $_POST ['submit3'])) {
-    header("Location: exercicio3.php");
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +29,9 @@ if (isset( $_POST ['submit3'])) {
     <main>
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <form action="inscrever.php" class="form-escrever" style="height: 20%;">
-                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa</h2><input type="text" class="txtNome" placeholder="Nome da equipa" required name="NomeEquipa"></div>
+                <form class="form-escrever" method="post" style="height: 20%;">
+                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa</h2>
+                  <input type="text" class="txtNome" placeholder="Nome da equipa" required name="NomeEquipa"></div>
                     <div class="jogadoresInscricao">
                         <h2 class="form-titulo">Inscrição Jogador Um</h2>
                         <div class="jogador">
@@ -71,7 +65,7 @@ if (isset( $_POST ['submit3'])) {
                         <div class="jogador">
                             <input type="text" class="txtNome" placeholder="Nome" required name="nome5">
                             <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno5">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="emai5">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email5">
                             <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam5">
                         </div>
                     </div>
@@ -91,22 +85,41 @@ function inscrever(){
   $dbname = "bd_lanparty";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
-  $nome = $_POST['nome'];
-  $numeroAluno = $_POST['numaluno'];
-  $email = $_POST['email'];
-  $steamID = $_POST['idsteam'];
+  $nome1 = $_POST['nome1'];
+  $numeroAluno1 = $_POST['numaluno1'];
+  $email1 = $_POST['email1'];
+  $steamID1 = $_POST['idsteam1'];
+
+  $nome2= $_POST['nome2'];
+  $numeroAluno2 = $_POST['numaluno2'];
+  $email2 = $_POST['email2'];
+  $steamID2 = $_POST['idsteam2'];
+
+  $nome3 = $_POST['nome3'];
+  $numeroAluno3 = $_POST['numaluno3'];
+  $email3 = $_POST['email3'];
+  $steamID3 = $_POST['idsteam3'];
+
+  $nome4 = $_POST['nome4'];
+  $numeroAluno4 = $_POST['numaluno4'];
+  $email4 = $_POST['email4'];
+  $steamID4 = $_POST['idsteam4'];
+
+  $nome5 = $_POST['nome5'];
+  $numeroAluno5 = $_POST['numaluno5'];
+  $email5 = $_POST['email5'];
+  $steamID5 = $_POST['idsteam5'];
+
   $equipa = $_POST['NomeEquipa'];
 
   $sqlEquipas = "INSERT INTO equipas (Nome_Equipa, Estado_equipa) VALUES ('$equipa', 1)";
   $getRes = $conn->prepare($sqlEquipas);
   $getRes->execute();
 
-  $sqlSelect = "SELECT ID_Equipa FROM equipas WHERE Nome_Equipa = $equipa";
+  $sqlSelect = "SELECT ID_Equipa FROM equipas WHERE Nome_Equipa = '$equipa'";
   $getRes = $conn->prepare($sqlSelect);
-  $getRes->execute();
-  while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
-      $equipaID = $row['ID_Equipa'];
-  }
+  $equipaID = $getRes->execute();
+  
 
   $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome1', '$numeroAluno1', '$email1', '$steamID1', 1 , '$equipaID')";
   $getRes = $conn->prepare($sql);

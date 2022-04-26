@@ -228,7 +228,7 @@ ALTER TABLE `estapas`
 ALTER TABLE `jogadores`
   ADD PRIMARY KEY (`id_jogadores`),
   ADD KEY `ID_estadoJogador` (`ID_estadoJogador`),
-  ADD KEY `ID_equipa` (`ID_equipa`),
+  ADD KEY `ID_equipa` (`ID_equipa`);
 
 --
 -- Índices para tabela `jogos`
