@@ -16,16 +16,16 @@ if (isset( $_POST ['submit3'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/styleregisto.css">
     <link rel="icon" href="images/icon_landingpage.png">
-    <title>Inscrever</title>
+    <title>Inscrições - Equipas</title>
 </head>
 
 <body>
         <header class="cabecalho">
             <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
             <nav class="cabecalho-menu" >
-                <a href="index.php" class="cabecalho-menu-item">Início</a>
-                <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-                <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
+            <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
+    <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
+    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
 
             </nav>
         </header>
@@ -80,7 +80,6 @@ if (isset( $_POST ['submit3'])) {
             </div>
         </section>
     </main>
-    <br><br>
 </body>
 </html>
 

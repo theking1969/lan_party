@@ -19,7 +19,6 @@ session_start();
 
             <nav class="cabecalho-menu" >
                 <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
-                <a href="" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
             </nav>
@@ -51,18 +50,7 @@ session_start();
             </div>
         </section> 
     </main>
-    <footer>         
     
-            <section class="rodape-conteudo">
-                            
-                    <section class="sec-img">
-                       
-                         <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
-                         <br>
-                    </section>                        
-            </section>         
-        </footer>
-        <br><br>
     </body>
     </html>
 
