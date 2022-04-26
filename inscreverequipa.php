@@ -78,6 +78,32 @@ session_start();
 </html>
 
 <?php
+function inscreverequipas($equipaID){
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "bd_lanparty";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+    $equipa = $_POST['NomeEquipa'];
+
+    $sqlEquipas = "INSERT INTO equipas (Nome_Equipa, Estado_equipa) VALUES ('$equipa', 1)";
+    $getRes = $conn->prepare($sqlEquipas);
+    $getRes->execute();
+
+    $sqlSelect = "SELECT ID_Equipa FROM equipas WHERE Nome_Equipa = '$equipa'";
+    $getRes = $conn->prepare($sqlSelect);
+    $equipaID = $getRes->execute();
+
+
+}
+
+
+
+
+
+
 function inscrever(){
   $servername = "localhost";
   $username = "root";
@@ -85,6 +111,7 @@ function inscrever(){
   $dbname = "bd_lanparty";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
+
   $nome1 = $_POST['nome1'];
   $numeroAluno1 = $_POST['numaluno1'];
   $email1 = $_POST['email1'];
@@ -110,17 +137,12 @@ function inscrever(){
   $email5 = $_POST['email5'];
   $steamID5 = $_POST['idsteam5'];
 
-  $equipa = $_POST['NomeEquipa'];
+  $equipaID = 0;
 
-  $sqlEquipas = "INSERT INTO equipas (Nome_Equipa, Estado_equipa) VALUES ('$equipa', 1)";
-  $getRes = $conn->prepare($sqlEquipas);
-  $getRes->execute();
+  inscreverequipas($equipaID);
 
-  $sqlSelect = "SELECT ID_Equipa FROM equipas WHERE Nome_Equipa = '$equipa'";
-  $getRes = $conn->prepare($sqlSelect);
-  $equipaID = $getRes->execute();
-  
 
+if (isset($equipaID)) {
   $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome1', '$numeroAluno1', '$email1', '$steamID1', 1 , '$equipaID')";
   $getRes = $conn->prepare($sql);
   $getRes->execute();
@@ -140,6 +162,7 @@ function inscrever(){
   $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome5', '$numeroAluno5', '$email5', '$steamID5', 1 , '$equipaID')";
   $getRes = $conn->prepare($sql);
   $getRes->execute();
+}
 }
 
 
