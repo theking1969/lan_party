@@ -33,10 +33,10 @@ session_start();
                             <button name="butaoInscreverIndividual" class="butao" value="inscrever">Inscrição Individual</button>
                             <br><br>
                               <button name="butaoInscreverEquipa" class="butao" value="inscrever">Inscrever como equipa!</button>
-                          
+
                         </form>
-                      
-            
+
+
                 </div>
             </div>
 
@@ -47,18 +47,18 @@ session_start();
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
     </main>
-    <footer>         
-    
+    <footer>
+
             <section class="rodape-conteudo">
-                            
+
                     <section class="sec-img">
-                       
+
                          <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
                          <br>
-                    </section>                        
-            </section>         
+                    </section>
+            </section>
         </footer>
         <br><br>
     </body>
@@ -87,6 +87,6 @@ function inscrever($inscrever){
             header("Location: inscreverequipa.php");
             break;
     }
-    
+
 }
 ?>
