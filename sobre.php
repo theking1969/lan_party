@@ -58,7 +58,7 @@ if (isset( $_POST ['submit3'])) {
 
     </div>
 </main>
-<br>
+
 <footer>         
     
     <section class="rodape-conteudo">

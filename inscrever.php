@@ -16,9 +16,9 @@ session_start();
 <header class="cabecalho">
     <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
     <nav class="cabecalho-menu" >
-        <a href="index.php" class="cabecalho-menu-item">Início</a>
-        <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-        <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
+    <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
+    <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
+    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
 
     </nav>
 </header>
@@ -48,21 +48,23 @@ session_start();
             <img src="images/Gaming-bro.svg" class="d-block w-100" alt="..."style="width:642px;height:448px;">
         </div>
     </section>
+    
+<footer>         
+    
+    <section class="rodape-conteudo">
+                    
+            <section class="sec-img">
+               
+                 <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
+                 <br>
+            </section>                        
+    </section>         
+</footer>
+<br><br>
 </main>
 
 </body>
-
-<footer>
-
-    <section class="rodape-conteudo">
-
-        <section class="sec-img">
-
-            <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
-            <br>
-        </section>
-    </section>
-</footer></html>
+</html>
 
 <?php
 //function verificationEmail(){
