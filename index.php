@@ -19,7 +19,6 @@ session_start();
 
             <nav class="cabecalho-menu" >
                 <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
-                <a href="" class="cabecalho-menu-item">Início</a>
                 <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
                 <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
             </nav>

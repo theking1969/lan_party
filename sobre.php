@@ -22,9 +22,9 @@ if (isset( $_POST ['submit3'])) {
 <header class="cabecalho">
     <img id="img" src="images\icon_landingpage.png"  alt="" width="3%" height="8%">
     <nav class="cabecalho-menu" >
-        <a href="index.php" class="cabecalho-menu-item">Início</a>
-        <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
-        <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
+    <a href="index.php" class="cabecalho-menu-item">Lan Party</a>
+    <a href="sobre.php" class="cabecalho-menu-item">Sobre o projeto</a>
+    <a href="inscrever.php" class="cabecalho-menu-item">Inscrições</a>
     </nav>
 </header>
 <section id="sec-titulo">
@@ -59,16 +59,17 @@ if (isset( $_POST ['submit3'])) {
     </div>
 </main>
 <br>
-<footer>
+<footer>         
+    
     <section class="rodape-conteudo">
-        <h2 style="padding-bottom: 2px; font-family: 'Cabin', sans-serif;line-height: 61px;color:white;">Redes Sociais</h2>
-        <section class="sec-img">
-            <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296499_fb_facebook_facebook logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296515_bird_tweet_twitter_twitter logo_icon.svg" alt="" width="4%" height="8%">
-            <img src="images\5296504_forum_reddit_reddit logo_icon.svg" alt="" width="4%" height="8%">
-        </section>
-    </section>
+                    
+            <section class="sec-img">
+               
+                 <img src="images\1164349_circle_instagram_logo_media_network_icon.svg" alt="" width="13%" height="10%"> <h5 style="color:#FFFFFF">@lanparty_psi5</h5>
+                 <br>
+            </section>                        
+    </section>         
 </footer>
+<br><br>
 </head>
 </html>
