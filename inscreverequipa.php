@@ -94,6 +94,8 @@ function insertequipa(){
   $getRes->execute();
 }
 
+
+
 function insertplayers($equipaID){
   $servername = "localhost";
   $username = "root";
@@ -163,7 +165,7 @@ function inscrever(){
 
 $equipa = $_POST['NomeEquipa'];
   //echo $equipa;
-  $sqlSelect = "SELECT ID_Equipa FROM equipas where Nome_Equipa = '$equipa' ORDER BY ID_Equipa DESC LIMIT 1;"; //output é sempre 1 ERRO
+  $sqlSelect = "SELECT ID_Equipa FROM equipas where Nome_Equipa = '$equipa'"; //output é sempre 1 ERRO
    $getRes = $conn->prepare($sqlSelect);
   $equipaID = $getRes->execute();
 
