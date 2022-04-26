@@ -37,9 +37,7 @@ session_start();
                 <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
                 <select name="equipa" id="equipasCombo">
                     <option selected disabled value="Escolha a equipa">Escolha a equipa</option>
-
                 </select>
-
                 <button class="botao" style="margin-bottom: 3%;" name="botao">Inscrever</button>
             </form>
         </div>
@@ -65,24 +63,6 @@ session_start();
 </footer></html>
 
 <?php
-//function verificationEmail(){
-//// const APP_URL = 'http://localhost/auth'; //por resolver
-//    // create the activation link
-//    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
-//
-//    // set email subject & body
-//    $subject = 'Confirme a sua conta';
-//    $message = <<<MESSAGE
-//            Ative a sua conta aqui ->
-//            $activation_link
-//            MESSAGE;
-//    // email header
-//    $header = "From:" . $_POST['email'];
-//
-//    // send the email
-//    mail($_POST['email'], $subject, nl2br($message), $header);
-//
-//}
 function verificarEquipa(){
     $servername = "localhost";
     $username = "root";
@@ -145,9 +125,4 @@ function inserirjogadores(){
 if(isset($_POST['botao'])) {
     inserirjogadores();
 }
-
-if (isset($_POST['Equipa'])){
-
-}
 ?>
-
