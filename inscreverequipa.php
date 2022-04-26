@@ -37,42 +37,43 @@ if (isset( $_POST ['submit3'])) {
          <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <form action="inscrever.php" class="form-escrever" style="height: 20%;">
-                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa</h2><input type="text" class="txtNome" placeholder="Nome da equipa"></div>
+                <div class="nomeEquipa"><h2 class="form-titulo">Nome da equipa</h2>
+                  <input type="text" class="txtNome" name="nomeEquipa" placeholder="Nome da equipa"></div>
                     <div class="jogadoresInscricao">
                         <h2 class="form-titulo">Inscrição Jogador Um</h2>
                         <div class="jogador">
-                            <input type="text" class="txtNome" placeholder="Nome" required name="nome">
-                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                            <input type="text" class="txtNome" placeholder="Nome" required name="nome1">
+                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno1">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email1">
+                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam1">
                         </div>
                         <h2 class="form-titulo">Inscrição Jogador Dois</h2>
                         <div class="jogador">
-                            <input type="text" class="txtNome" placeholder="Nome" required name="nome">
-                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                            <input type="text" class="txtNome" placeholder="Nome" required name="nome2">
+                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno2">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email2">
+                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam2">
                         </div>
                         <h2 class="form-titulo">Inscrição Jogador Três</h2>
                         <div class="jogador">
-                            <input type="text" class="txtNome" placeholder="Nome" required name="nome">
-                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                            <input type="text" class="txtNome" placeholder="Nome" required name="nome3">
+                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno3">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email3">
+                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam3">
                         </div>
                         <h2 class="form-titulo">Inscrição Jogador Quatro</h2>
                         <div class="jogador">
-                            <input type="text" class="txtNome" placeholder="Nome" required name="nome">
-                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                            <input type="text" class="txtNome" placeholder="Nome" required name="nome4">
+                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno4">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email4">
+                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam4">
                         </div>
                         <h2 class="form-titulo">Inscrição Jogador Cinco</h2>
                         <div class="jogador">
-                            <input type="text" class="txtNome" placeholder="Nome" required name="nome">
-                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno">
-                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email">
-                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam">
+                            <input type="text" class="txtNome" placeholder="Nome" required name="nome5">
+                            <input type="text" class="txtNumeroAluno" placeholder="Nºaluno" required name="numaluno5">
+                            <input type="text" class="txtEmail" placeholder="E-mail" required name="email5">
+                            <input type="text" class="txtSteam" placeholder="ID Steam" required name="idsteam5">
                         </div>
                     </div>
                     <button class="botao" style="margin-bottom: 3%; ">Inscrever</button>
@@ -86,54 +87,69 @@ if (isset( $_POST ['submit3'])) {
 
 <?php
 function inscrever(){
-    if (isset($_POST['nome'])){
-        if (isset($_POST['numaluno'])){
-            if(isset($_POST['email'])){
-                if (isset($_POST['idsteam'])){
-                    $dbHost= 'Localhost';
-                    $dbUsername= 'root';
-                    $Password= '';
-                    $dbName= 'bd_lanparty';
-                    $conn = new mysqli($dbHost, $dbUsername, $Password,$dbName) or die ('erro');
 
-                    $sql = 'INSERT INTO jogadores (Nome_jogadores, NumESCO, Email, Turma, Steam_ID, ID_EstadoJogador) VALUES (' . $_POST['nome'] . ',' . $_POST['numaluno'] . ',' . $_POST['email'] . ',' . $_POST['turma'] . ',' . $_POST['idsteam'] . ',)';
+    $inscricoes = false;
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "bd_lanparty";
 
-                    if (mysqli_query($conn, $sql)) {
-                        echo "Inscrito com sucesso!";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    $nome = $_POST['nome'];
+    $numeroAluno = $_POST['numaluno'];
+    $email = $_POST['email'];
+    $steamID = $_POST['idsteam'];
+    $equipa = $_POST['NomeEquipa'];
 
-                    mysqli_close($conn);
-                }
-            }
-        }
+    $sqlSelect = "INSERT INTO equipas(Nome_Equipa, Estado_equipa) VALUES('$equipa', 1)";
+    $getRes = $conn->prepare($sqlSelect);
+    $getRes->execute();
+
+    $sqlSelect = "SELECT ID_Equipa FROM equipas WHERE Nome_Equipa = $equipa";
+    $getRes = $conn->prepare($sqlSelect);
+    $getRes->execute();
+    while($row = $getRes->fetch(PDO::FETCH_ASSOC)){
+        $equipaID = $row['ID_Equipa'];
     }
+    while($inscricoes == false){
+  $cont = 1;
+  if($cont == 1){
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome1', '$numeroAluno1', '$email1', '$steamID1', 1 , '$equipaID')";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+    $cont++;
+  }
+  else if($cont == 2){
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome2', '$numeroAluno2', '$email2', '$steamID2', 1 , '$equipaID')";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+    $cont++;
+  }
+  else if($cont == 3){
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome3', '$numeroAluno3', '$email3', '$steamID3', 1 , '$equipaID')";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+    $cont++;
+  }
+  else if($cont == 4){
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome4', '$numeroAluno4', '$email4', '$steamID4', 1 , '$equipaID')";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+    $cont++;
+  }
+  else if($cont == 5){
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome5', '$numeroAluno5', '$email5', '$steamID5', 1 , '$equipaID')";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+    $cont++;
+    $inscricoes = true;
+  }
+  }
 }
 
-function verificationEmail(){
-/* function verificationEmail(){
-// const APP_URL = 'http://localhost/auth'; //por resolver
-    // create the activation link
-    $activation_link = APP_URL . "/activate.php?email=$email&activation_code=$activation_code"; //por resolver
-
-    // set email subject & body
-    $subject = 'Confirme a sua conta';
-    $message = <<<MESSAGE
-            Ative a sua conta aqui ->
-            $activation_link
-            MESSAGE;
-    // email header
-    $header = "From:" . $_POST['email'];
-
-    // send the email
-    mail($_POST['email'], $subject, nl2br($message), $header);
-
-}
-} */
 
 if(isset($_POST['botao'])) {
-    verificationEmail();
+    inscrever();
 }
 
 if (isset($_POST['Equipa'])){
