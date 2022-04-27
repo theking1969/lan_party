@@ -27,7 +27,7 @@ session_start();
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Bem-vindo jogador</h1>
                 <h2 class="conteudo-principal-escrito-subtitulo">    A turma PSI5 da escola ESCO preparou uma Lan-party que irá decorrer nas horas de aulas com objetivo de reunir maior número de pessoas para se defrontarem em um torneio de CS:GO.</h2>
-                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás à espera do que ? <b>Inscreve-te! <b></h2>
+                <h2 class="conteudo-principal-escrito-subtitulo" style="text-align:center; font-size: 2em;">Estás à espera do quê ? <b>Inscreve-te! <b></h2>
                 <div class="conteudo-principal-escrito-butao">
                         <form action="index.php" method="post">
                             <button name="butaoInscreverIndividual" class="butao" value="inscrever">Inscrição Individual</button>

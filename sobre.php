@@ -28,7 +28,7 @@ if (isset( $_POST ['submit3'])) {
 </header>
 <section id="sec-titulo">
     <div class="break"></div>
-    <h1 id="titulo" style="text-align: center; font-size: 3rem; color: white;">LAN Party CS:GO</h1>
+    <h1 id="titulo" style="text-align: center; font-size: 3rem; color: white; margin-top: 5%;">LAN Party CS:GO</h1>
 </section>
 <main>
     <div class="conteudo-principal-escrito">
@@ -52,7 +52,7 @@ if (isset( $_POST ['submit3'])) {
                 </ul>
             </h2>
             <h1 style="text-align: center;" class="conteudo-principal-escrito-titulo">Funcionamento do torneio</h1>
-        <h2 class="conteudo-principal-escrito-subtitulo">Os participantes podem inscrever-se na aba <a href="index.php">"Inscrições"</a> e inscreverer uma equipa (5 Participantes), ou simplesmente 1 participante poderá participar, mas será-lhe atribuida uma equipa de outros participantes sem equipa, caso não haja participantes suficientes sem equipa o participante não poderá jogar no torneio. <br> Podem trazer os vossos periféricos (Rato e teclado). <br><br> <strong style="text-align: center;">TODOS OS PARTICIPANTES DA EQUIPA QUE FICAR EM 1º LUGAR VÃO TER UM PRÉMIO!</strong> </h2>
+        <h2 class="conteudo-principal-escrito-subtitulo">Os participantes podem inscrever-se na aba <a href="index.php" style="text-decoration: underline; color: white;">Inscrições</a> e inscreverer uma equipa (5 Participantes), ou simplesmente 1 participante poderá participar, mas será-lhe atribuida uma equipa de outros participantes sem equipa, caso não haja participantes suficientes sem equipa o participante não poderá jogar no torneio. <br> Podem trazer os vossos periféricos (Rato e teclado). <br><br> <strong style="text-align: center;">TODOS OS PARTICIPANTES DA EQUIPA QUE FICAR EM 1º LUGAR VÃO TER UM PRÉMIO!</strong> </h2>
 
 
     </div>
