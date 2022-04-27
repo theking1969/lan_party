@@ -97,8 +97,6 @@ function verificarEquipa(){
     $steamID = $_POST['idsteam'];
 }
 
-
-
 function inserirjogadores(){
     $servername = "localhost";
     $username = "root";
