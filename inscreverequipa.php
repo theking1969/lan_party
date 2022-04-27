@@ -185,6 +185,7 @@ $equipa = $_POST['NomeEquipa'];
 
 if(isset($_POST['botao'])) {
     inscrever();
+    echo '<script>alert("Voçês inscreveram-se!")</script>';
 }
 
 

@@ -165,5 +165,6 @@ elseif ($_POST['equipa'] == "Equipa 5") {
 
 if(isset($_POST['botao'])) {
     inserirjogadores();
+    echo '<script>alert("Voçê se inscreveu!")</script>';
 }
 ?>
