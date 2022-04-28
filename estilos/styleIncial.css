@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    height: 100%;
+    min-height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    font-size: 100%;
+    background: rgb(32,22,83);
+    background: linear-gradient(167deg, rgba(32,22,83,1) 0%, rgba(222,22,157,1) 18%, rgba(137,19,126,1) 46%, rgba(40,16,90,1) 78%);
+    background-attachment: fixed;
+    min-height: 100%;
+}
+h1{
+    font-family: 'Righteous', cursive;
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    background-color: rgba(43, 43, 43, 0.781);
+}
+ .cabecalho-menu{
+
+    display: flex;  
+    gap: 30px;
+    font-family: 'Righteous', cursive;
+}
+.cabecalho-menu-item{
+    color: white;
+    text-decoration: none;
+}
+main{
+        margin-bottom: 2px;       
+}
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.conteudo-principal-escrito{
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+.conteudo-principal-escrito-titulo{
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+.conteudo-principal-escrito-subtitulo{
+    font-family: 'Cabin', sans-serif;
+    font-size: 50px;
+    line-height: 61px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+   font-family: Cabin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    max-width: 500px;
+    
+}
+footer{
+    margin-top: auto;
+   
+}
+.titulo-footer{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+}
+.rodape-conteudo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;  
+}
+.footer-menu-nav{
+    display: flex;
+    gap: 150px;
+}
+.footer-nav-item{
+    font-family: 'Righteous', cursive;
+   
+}
+.sec-img{
+    margin-bottom: 2px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.butao{
+    background-color: rgba(78, 213, 207, 0.81);
+    width: 320px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Cabin', sans-serif;
+    border-radius: 31px;
+    font-size: 19px;
+    color: #ffffff;
+}
+.conteudo-principal-escrito-butao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.butao:hover{
+    background: #0370ff;
+}
+@media only screen and (max-width: 1200px) {
+    .conteudo-principal-escrito-titulo{
+        margin-left: 10px;  
+    } 
+    .conteudo-principal-escrito-subtitulo{
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .cabecalho-menu {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .conteudo-principal{
+        justify-content: center;
+        flex-direction: column;
+       
+    }
+    #carouselExampleControls{
+        max-width: 400px;
+    }
+    .conteudo-principal-escrito-titulo{
+        display: flex;
+        justify-content: center;
+
+    } 
+    .conteudo-principal-escrito{        
+        display: flex;
+        flex-direction: column;
+        gap: 32px;    
+        justify-content: center;
+        max-width: 300px;
+        
+        text-align: center;
+
+    }
+
+    #img{
+        width: 10%;
+    }
+
+
+}
