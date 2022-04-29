@@ -133,7 +133,7 @@ session_start();
       $password = "";
       $dbname = "bd_lanparty";
       if ($conn = new mysqli($servername, $username, $password, $dbname)) {
-        echo "'<option>CONECT</option>'";
+        //echo "'<option>CONECT</option>'";
 
         $pesquisa = $_POST['pesquisa'];
 
@@ -141,12 +141,12 @@ session_start();
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-          echo '<option> Nome: ' . $row["Nome_jogadores"] . ' / id equipa: ' . $row["ID_equipa"] . '</option>';
+          echo '<h1 style="color: white;">Nome: ' . $row["Nome_jogadores"] . ' / id equipa: ' . $row["ID_equipa"] . '</h1>';
         }
         }
       }
       else {
-        echo "'<option>ERROR CONECTION</option>'";
+        echo "ERROR CONECTION";
       }
     }
 
