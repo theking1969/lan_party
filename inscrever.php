@@ -69,25 +69,33 @@ session_start();
 <?php
 function insert($equipa){
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "lanparty";
+  $password = "lanparty2022";
   $dbname = "bd_lanparty";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  $nome = $_POST['nome'];
-  $numeroAluno = $_POST['numaluno'];
-  $email = $_POST['email'];
-  $steamID = $_POST['idsteam'];
+  if ($conn = new mysqli($servername, $username, $password, $dbname)) {
+    echo "conect";
 
-  $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , $equipa)";
-  $getRes = $conn->prepare($sql);
-  $getRes->execute();
+    $nome = $_POST['nome'];
+    $numeroAluno = $_POST['numaluno'];
+    $email = $_POST['email'];
+    $steamID = $_POST['idsteam'];
+
+    $sql = "INSERT INTO jogadores(Nome_jogadores, NumESCO, Email, Steam_ID, ID_estadoJogador, ID_equipa) VALUES('$nome', '$numeroAluno', '$email', '$steamID', 2 , $equipa)";
+    $getRes = $conn->prepare($sql);
+    $getRes->execute();
+
+    echo '<script>alert("Você se inscreveu!")</script>';
+  }
+  else {
+    echo "ERROR CONECTION";
+  }
 }
 
 function verificarEquipa(){
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "lanparty";
+    $password = "lanparty2022";
     $dbname = "bdlan_party";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -99,8 +107,8 @@ function verificarEquipa(){
 
 function inserirjogadores(){
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "lanparty";
+    $password = "lanparty2022";
     $dbname = "bd_lanparty";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -165,6 +173,5 @@ elseif ($_POST['equipa'] == "Equipa 5") {
 
 if(isset($_POST['botao'])) {
     inserirjogadores();
-    echo '<script>alert("Voçê se inscreveu!")</script>';
 }
 ?>

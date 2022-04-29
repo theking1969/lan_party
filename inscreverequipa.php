@@ -77,8 +77,8 @@ session_start();
 <?php
 function insertequipa(){
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "lanparty";
+  $password = "lanparty2022";
   $dbname = "bd_lanparty";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -94,8 +94,8 @@ function insertequipa(){
 
 function insertplayers($equipaID){
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "lanparty";
+  $password = "lanparty2022";
   $dbname = "bd_lanparty";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -151,11 +151,12 @@ function insertplayers($equipaID){
 
 function inscrever(){
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "lanparty";
+  $password = "lanparty2022";
   $dbname = "bd_lanparty";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn = new mysqli($servername, $username, $password, $dbname)) {
+  echo "conect";
 
   insertequipa();
 
@@ -170,19 +171,23 @@ $equipa = $_POST['NomeEquipa'];
   // output data of each row
   while($row = $result->fetch_assoc()) {
     $equipaID = $row["ID_Equipa"];
-    echo "id: " . $row["ID_Equipa"];
   }
 } else {
   echo "0 results";
 }
 
   insertplayers($equipaID);
+
+  echo '<script>alert("Vocês inscreveram-se!")</script>';
+}
+else {
+  echo "ERROR CONECTION";
+}
 }
 
 
 if(isset($_POST['botao'])) {
     inscrever();
-    echo '<script>alert("Voçês inscreveram-se!")</script>';
 }
 
 

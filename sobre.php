@@ -41,7 +41,7 @@ if (isset( $_POST ['submit3'])) {
             </div>
         </div>
         <h1 style="text-align: center;"class="conteudo-principal-escrito-titulo">Sobre este projeto.</h1>
-        <h2 class="conteudo-principal-escrito-subtitulo">Este projeto decorrerá no dia 5 de maio ás 9:30, na sala 1, com 14 PC's disponíveis. Este é o projeto integrador da PSI5, em que este mesmo se baseia num Torneio CS:GO em LAN)</h2>
+        <h2 class="conteudo-principal-escrito-subtitulo">Este projeto decorrerá no dia 4 de maio ás 9:30, na sala 1, com 14 PC's disponíveis. Este é o projeto integrador da PSI5, em que este mesmo se baseia num Torneio CS:GO em LAN)</h2>
         <h1 style="text-align: center;" class="conteudo-principal-escrito-titulo">Regras</h1>
             <ul class="conteudo-principal-escrito-subtitulo">
                     <li>Proibido gritar durante os jogos.</li>
